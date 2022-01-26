@@ -1,0 +1,30 @@
+﻿{
+  "culture": "zh-Hans",
+  "texts": {
+    "Permission:SystemManagement": "系统管理",
+    "Permission:Base": "基础权限",
+    "Permission:WithToken": "要求Token",
+    "Permission:ChangePassword": "修改密码",
+    "Permission:Users": "用户管理",
+    "Permission:ResetPassword": "重置密码",
+    "Permission:Create": "创建",
+    "Permission:Update": "更新",
+    "Permission:Delete": "删除",
+    "Permission:Import": "导入",
+    "Permission:Export": "导出",
+    "Permission:Departs": "部门管理",
+    "Permission:QueryUser": "查询用户",
+    "Permission:Posts": "职务管理",
+    "Permission:Roles": "角色管理",
+    "Permission:UiPermissions": "菜单权限管理",
+    "Permission:RefreshBackgroundApi": "刷新接口资源",
+    "Permission:Dicts": "数据字典管理",
+    "Permission:Platform": "平台",
+    "TenantServiceDataSeeder:User:Memo": "系统管理员，默认拥有系统所有权限，初始密码为123456",
+    "TenantServiceDataSeeder:Dict:Description": "部门类型",
+    "TenantServiceDataSeeder:Post:Name": "管理员",
+    "TenantServiceDataSeeder:Post:Memo": "系统管理员",
+    "TenantServiceDataSeeder:Depart:OrgName1": "公司",
+    "TenantServiceDataSeeder:Depart:OrgName2": "IT部"
+  }
+}

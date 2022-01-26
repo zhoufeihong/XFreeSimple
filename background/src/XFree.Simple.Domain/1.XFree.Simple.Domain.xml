@@ -1,0 +1,1149 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>1.XFree.Simple.Domain</name>
+    </assembly>
+    <members>
+        <member name="T:XFree.Simple.Domain.DomainModule">
+            <summary>
+            这个模块设计成直接依赖EF Core，因为只有这样才能使用EF Core的表达式方法。
+            </summary>
+        </member>
+        <member name="M:XFree.Simple.Domain.DomainModule.ConfigureServices(Volo.Abp.Modularity.ServiceConfigurationContext)">
+            <summary>
+            
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="T:XFree.Simple.Domain.SystemManagement.Common.DatabaseConnection">
+            <summary>
+             数据库连接信息
+            </summary>
+        </member>
+        <member name="M:XFree.Simple.Domain.SystemManagement.Common.DatabaseConnection.#ctor(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="id"></param>
+        </member>
+        <member name="P:XFree.Simple.Domain.SystemManagement.Common.DatabaseConnection.DatabaseProviderType">
+            <summary>
+            0: NotSpecified
+            1: EntityFrameworkCore
+            2: MongoDb
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Domain.SystemManagement.Common.DatabaseConnection.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Domain.SystemManagement.Common.DatabaseConnection.Memo">
+            <summary>
+            备注
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Domain.SystemManagement.Common.DatabaseConnection.Status">
+            <summary>
+            状态
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Domain.SystemManagement.Common.DatabaseConnection.RangeTenantIds">
+            <summary>
+             限定商户范围,默认不限定
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Domain.SystemManagement.Common.DatabaseConnection.ConnectionString">
+            <summary>
+             数据库连接字符串
+            </summary>
+        </member>
+        <member name="T:XFree.Simple.Domain.SystemManagement.Common.Dict">
+            <summary>
+            字典信息
+            </summary>
+        </member>
+        <member name="M:XFree.Simple.Domain.SystemManagement.Common.Dict.#ctor(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="id"></param>
+        </member>
+        <member name="P:XFree.Simple.Domain.SystemManagement.Common.Dict.TenantId">
+            <summary>
+            租户Id
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Domain.SystemManagement.Common.Dict.DictCode">
+            <summary>
+            字典编码
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Domain.SystemManagement.Common.Dict.DictEnName">
+            <summary>
+            字典名称
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Domain.SystemManagement.Common.Dict.DictName">
+            <summary>
+            字典名称
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Domain.SystemManagement.Common.Dict.Description">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="T:XFree.Simple.Domain.SystemManagement.Common.DictItem">
+            <summary>
+            字典项
+            </summary>
+        </member>
+        <member name="M:XFree.Simple.Domain.SystemManagement.Common.DictItem.#ctor(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="id"></param>
+        </member>
+        <member name="P:XFree.Simple.Domain.SystemManagement.Common.DictItem.TenantId">
+            <summary>
+            租户Id
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Domain.SystemManagement.Common.DictItem.DictId">
+            <summary>
+            字典id
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Domain.SystemManagement.Common.DictItem.ItemText">
+            <summary>
+            字典项文本
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Domain.SystemManagement.Common.DictItem.ItemEnText">
+            <summary>
+            字典项英文文本
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Domain.SystemManagement.Common.DictItem.ItemValue">
+            <summary>
+            字典项值
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Domain.SystemManagement.Common.DictItem.Description">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Domain.SystemManagement.Common.DictItem.SortOrder">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Domain.SystemManagement.Common.DictItem.Enabled">
+            <summary>
+            状态（1启用 0不启用）
+            </summary>
+        </member>
+        <member name="T:XFree.Simple.Domain.SystemManagement.Common.DictManager">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:XFree.Simple.Domain.SystemManagement.Common.DictManager.#ctor(Volo.Abp.Domain.Repositories.IRepository{XFree.Simple.Domain.SystemManagement.Common.Dict,System.String},Volo.Abp.Domain.Repositories.IRepository{XFree.Simple.Domain.SystemManagement.Common.DictItem,System.String},XFree.Simple.Domain.Shared.Common.ErrorMessageService)">
+            <summary>
+            
+            </summary>
+            <param name="dictRepository"></param>
+            <param name="dictItemRepository"></param>
+            <param name="errorMessageService"></param>
+        </member>
+        <member name="M:XFree.Simple.Domain.SystemManagement.Common.DictManager.AddDictItem(XFree.Simple.Domain.SystemManagement.Common.DictItem)">
+            <summary>
+             添加字典项
+            </summary>
+            <param name="dictItem"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XFree.Simple.Domain.SystemManagement.Common.DictManager.UpdateDictItem(System.String,System.String,System.String,System.String,System.Nullable{System.Int32},System.String)">
+            <summary>
+            更新字典项
+            </summary>
+            <param name="dictItemId"></param>
+            <param name="newItemValue"></param>
+            <param name="newItemText"></param>
+            <param name="newDescription"></param>
+            <param name="sortOrder"></param>
+            <param name="newItemEnText"></param>
+            <returns></returns>
+        </member>
+        <member name="T:XFree.Simple.Domain.SystemManagement.Organization.Depart">
+            <summary>
+            组织机构/岗位
+            </summary>
+        </member>
+        <member name="M:XFree.Simple.Domain.SystemManagement.Organization.Depart.#ctor(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="id"></param>
+        </member>
+        <member name="P:XFree.Simple.Domain.SystemManagement.Organization.Depart.TenantId">
+            <summary>
+            租户Id
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Domain.SystemManagement.Organization.Depart.ParentId">
+            <summary>
+            父机构ID
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Domain.SystemManagement.Organization.Depart.OrgName">
+            <summary>
+            机构/部门名称
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Domain.SystemManagement.Organization.Depart.OrgNameEn">
+            <summary>
+            英文名
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Domain.SystemManagement.Organization.Depart.OrgCategory">
+            <summary>
+            机构类别 1组织机构，2岗位
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Domain.SystemManagement.Organization.Depart.OrgLevelType">
+            <summary>
+            机构类型 1一级部门 2子部门
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Domain.SystemManagement.Organization.Depart.OrgType">
+            <summary>
+             类型
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Domain.SystemManagement.Organization.Depart.OrgCode">
+            <summary>
+            机构编码
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Domain.SystemManagement.Organization.Depart.Contact">
+            <summary>
+            联系方式
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Domain.SystemManagement.Organization.Depart.Memo">
+            <summary>
+            备注
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Domain.SystemManagement.Organization.Depart.Status">
+            <summary>
+            状态
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Domain.SystemManagement.Organization.Depart.SortOrder">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Domain.SystemManagement.Organization.Depart.Address">
+            <summary>
+            地址
+            </summary>
+        </member>
+        <member name="T:XFree.Simple.Domain.SystemManagement.Organization.DepartManager">
+            <summary>
+             组织机构管理者
+            </summary>
+        </member>
+        <member name="M:XFree.Simple.Domain.SystemManagement.Organization.DepartManager.#ctor(Volo.Abp.Domain.Repositories.IRepository{XFree.Simple.Domain.SystemManagement.Organization.Depart,System.String})">
+            <summary>
+            
+            </summary>
+            <param name="departRepository"></param>
+        </member>
+        <member name="M:XFree.Simple.Domain.SystemManagement.Organization.DepartManager.GetDeepDeparts(System.String)">
+            <summary>
+            获取组织机构及其下级
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="T:XFree.Simple.Domain.SystemManagement.Organization.EventHandlers.OperationEventHandler">
+            <summary>
+            用户操作事件处理器
+            </summary>
+        </member>
+        <member name="M:XFree.Simple.Domain.SystemManagement.Organization.EventHandlers.OperationEventHandler.#ctor(Volo.Abp.Domain.Repositories.IRepository{XFree.Simple.Domain.SystemManagement.Organization.OperationInfo,System.String},Volo.Abp.Guids.IGuidGenerator,Volo.Abp.Auditing.IAuditingManager)">
+            <summary>
+            
+            </summary>
+            <param name="operationRepository"></param>
+            <param name="guidGenerator"></param>
+            <param name="auditingManager"></param>
+        </member>
+        <member name="M:XFree.Simple.Domain.SystemManagement.Organization.EventHandlers.OperationEventHandler.HandleEventAsync(XFree.Simple.Domain.SystemManagement.Organization.Events.OperationEvent)">
+            <summary>
+            
+            </summary>
+            <param name="eventData"></param>
+            <returns></returns>
+        </member>
+        <member name="T:XFree.Simple.Domain.SystemManagement.Organization.Events.OperationInfoHandler">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:XFree.Simple.Domain.SystemManagement.Organization.Events.OperationInfoHandler.HandleEventAsync(Volo.Abp.Domain.Entities.Events.EntityCreatedEventData{XFree.Simple.Domain.SystemManagement.Organization.OperationInfo})">
+            <summary>
+            
+            </summary>
+            <param name="eventData"></param>
+            <returns></returns>
+        </member>
+        <member name="T:XFree.Simple.Domain.SystemManagement.Organization.Events.OperationEvent">
+            <summary>
+            用户操作事件消息实体
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Domain.SystemManagement.Organization.Events.OperationEvent.UserId">
+            <summary>
+            用户Id
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Domain.SystemManagement.Organization.Events.OperationEvent.Title">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Domain.SystemManagement.Organization.Events.OperationEvent.Content">
+            <summary>
+             内容
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Domain.SystemManagement.Organization.Events.OperationEvent.Ip">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Domain.SystemManagement.Organization.Events.OperationEvent.Address">
+            <summary>
+            登录地址
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Domain.SystemManagement.Organization.Events.OperationEvent.Status">
+            <summary>
+            状态(1-成功 2-失败)
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Domain.SystemManagement.Organization.Events.OperationEvent.CreationTime">
+            <summary>
+            时间
+            </summary>
+        </member>
+        <member name="T:XFree.Simple.Domain.SystemManagement.Organization.OperationInfo">
+            <summary>
+            操作信息
+            </summary>
+        </member>
+        <member name="M:XFree.Simple.Domain.SystemManagement.Organization.OperationInfo.#ctor(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="id"></param>
+        </member>
+        <member name="P:XFree.Simple.Domain.SystemManagement.Organization.OperationInfo.UserId">
+            <summary>
+            用户Id
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Domain.SystemManagement.Organization.OperationInfo.Title">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Domain.SystemManagement.Organization.OperationInfo.Content">
+            <summary>
+             内容
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Domain.SystemManagement.Organization.OperationInfo.Ip">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Domain.SystemManagement.Organization.OperationInfo.Address">
+            <summary>
+            地址
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Domain.SystemManagement.Organization.OperationInfo.Status">
+            <summary>
+            状态(1-成功 2-失败)
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Domain.SystemManagement.Organization.OperationInfo.CreationTime">
+            <summary>
+            时间
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Domain.SystemManagement.Organization.OperationInfo.TenantId">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:XFree.Simple.Domain.SystemManagement.Organization.Post">
+            <summary>
+            职务
+            </summary>
+        </member>
+        <member name="M:XFree.Simple.Domain.SystemManagement.Organization.Post.#ctor(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="id"></param>
+        </member>
+        <member name="P:XFree.Simple.Domain.SystemManagement.Organization.Post.TenantId">
+            <summary>
+            租户Id
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Domain.SystemManagement.Organization.Post.Code">
+            <summary>
+            编码
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Domain.SystemManagement.Organization.Post.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Domain.SystemManagement.Organization.Post.Status">
+            <summary>
+            状态
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Domain.SystemManagement.Organization.Post.SortOrder">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Domain.SystemManagement.Organization.Post.Memo">
+            <summary>
+            备注
+            </summary>
+        </member>
+        <member name="T:XFree.Simple.Domain.SystemManagement.Organization.Tenant">
+            <summary>
+             租户信息
+            </summary>
+        </member>
+        <member name="M:XFree.Simple.Domain.SystemManagement.Organization.Tenant.#ctor(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="id"></param>
+        </member>
+        <member name="P:XFree.Simple.Domain.SystemManagement.Organization.Tenant.Code">
+            <summary>
+             租户编码
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Domain.SystemManagement.Organization.Tenant.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Domain.SystemManagement.Organization.Tenant.Memo">
+            <summary>
+             备注
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Domain.SystemManagement.Organization.Tenant.DefaultConnectionStringName">
+            <summary>
+             数据库连接配置名称
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Domain.SystemManagement.Organization.Tenant.IsStandaloneDatabase">
+            <summary>
+             采用独立的数据库
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Domain.SystemManagement.Organization.Tenant.StandaloneDatabaseConnectionString">
+            <summary>
+             采用独立的数据库连接字符串
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Domain.SystemManagement.Organization.Tenant.Phone">
+            <summary>
+            手机号/电话
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Domain.SystemManagement.Organization.Tenant.Email">
+            <summary>
+            邮箱
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Domain.SystemManagement.Organization.Tenant.Language">
+            <summary>
+            语言
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Domain.SystemManagement.Organization.Tenant.Status">
+            <summary>
+            商户状态
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Domain.SystemManagement.Organization.Tenant.InitialDataStatus">
+            <summary>
+             数据初始化状态
+             TODO: Job重试
+            </summary>
+        </member>
+        <member name="M:XFree.Simple.Domain.SystemManagement.Organization.Tenant.SetInitialDataStatus">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:XFree.Simple.Domain.SystemManagement.Organization.TenantManager">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:XFree.Simple.Domain.SystemManagement.Organization.TenantManager._tenantRepository">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:XFree.Simple.Domain.SystemManagement.Organization.TenantManager._errorMessageService">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:XFree.Simple.Domain.SystemManagement.Organization.TenantManager.#ctor(Volo.Abp.Domain.Repositories.IRepository{XFree.Simple.Domain.SystemManagement.Organization.Tenant,System.String},XFree.Simple.Domain.Shared.Common.ErrorMessageService)">
+            <summary>
+            
+            </summary>
+            <param name="tenantRepository"></param>
+            <param name="errorMessageService"></param>
+        </member>
+        <member name="M:XFree.Simple.Domain.SystemManagement.Organization.TenantManager.CreateAsync(XFree.Simple.Domain.SystemManagement.Organization.Tenant)">
+            <summary>
+            创建租户
+            </summary>
+            <param name="tenant"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XFree.Simple.Domain.SystemManagement.Organization.TenantManager.CheckTenantUpdate(XFree.Simple.Domain.SystemManagement.Organization.Tenant,System.Boolean,System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="tenant"></param>
+            <param name="isStandaloneDatabase"></param>
+            <param name="defaultConnectionStringName"></param>
+            <param name="standaloneDatabaseConnectionString"></param>
+        </member>
+        <member name="M:XFree.Simple.Domain.SystemManagement.Organization.TenantManager.UpdateAsync(XFree.Simple.Domain.SystemManagement.Organization.Tenant)">
+            <summary>
+            更新租户信息
+            </summary>
+            <param name="tenant"></param>
+            <returns></returns>
+        </member>
+        <member name="T:XFree.Simple.Domain.SystemManagement.Organization.User">
+            <summary>
+            用户
+            </summary>
+        </member>
+        <member name="M:XFree.Simple.Domain.SystemManagement.Organization.User.#ctor(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="id"></param>
+        </member>
+        <member name="P:XFree.Simple.Domain.SystemManagement.Organization.User.TenantId">
+            <summary>
+            租户Id
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Domain.SystemManagement.Organization.User.SupperUser">
+            <summary>
+             管理员用户
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Domain.SystemManagement.Organization.User.DepartId">
+            <summary>
+            部门Id
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Domain.SystemManagement.Organization.User.PostId">
+            <summary>
+            职务Id
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Domain.SystemManagement.Organization.User.LoginName">
+            <summary>
+            登录账号
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Domain.SystemManagement.Organization.User.Nickname">
+            <summary>
+            昵称/姓名
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Domain.SystemManagement.Organization.User.Password">
+            <summary>
+            密码
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Domain.SystemManagement.Organization.User.Salt">
+            <summary>
+            密码盐
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Domain.SystemManagement.Organization.User.Avatar">
+            <summary>
+            头像
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Domain.SystemManagement.Organization.User.EmployeeIDNumber">
+            <summary>
+            工号
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Domain.SystemManagement.Organization.User.Birthday">
+            <summary>
+            生日
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Domain.SystemManagement.Organization.User.Sex">
+            <summary>
+            性别(0-默认未知,1-男,2-女)
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Domain.SystemManagement.Organization.User.UserType">
+            <summary>
+            账号类型: ( 1: 平台   2:租户用户)
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Domain.SystemManagement.Organization.User.Email">
+            <summary>
+            邮箱
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Domain.SystemManagement.Organization.User.Phone">
+            <summary>
+            电话
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Domain.SystemManagement.Organization.User.Memo">
+            <summary>
+             备注
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Domain.SystemManagement.Organization.User.Status">
+            <summary>
+            状态(1-正常,2-锁定)
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Domain.SystemManagement.Organization.User.LoginIp">
+            <summary>
+            最后登录ip
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Domain.SystemManagement.Organization.User.LockLogin">
+            <summary>
+            登录锁定
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Domain.SystemManagement.Organization.User.LoginDate">
+            <summary>
+            最后登录时间
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Domain.SystemManagement.Organization.User.PwdUpdateDate">
+            <summary>
+            最后密码更改时间
+            </summary>
+        </member>
+        <member name="M:XFree.Simple.Domain.SystemManagement.Organization.User.SetPassword(System.String)">
+            <summary>
+            设置密码
+            </summary>
+            <param name="password"></param>
+        </member>
+        <member name="M:XFree.Simple.Domain.SystemManagement.Organization.User.SetStatus(XFree.Simple.Domain.Shared.SystemManagement.Enum.NormalLockedStatus)">
+            <summary>
+            修改状态
+            </summary>
+            <param name="status"></param>
+        </member>
+        <member name="M:XFree.Simple.Domain.SystemManagement.Organization.User.UpdatePassword(System.String)">
+            <summary>
+            修改密码
+            </summary>
+            <param name="password"></param>
+        </member>
+        <member name="M:XFree.Simple.Domain.SystemManagement.Organization.User.IsTruePassword(System.String)">
+            <summary>
+            判断密码是否正确
+            </summary>
+            <param name="password"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XFree.Simple.Domain.SystemManagement.Organization.User.GetPasswordSignature(System.String,System.String)">
+            <summary>
+            获取密码+盐的签名
+            </summary>
+            <param name="password"></param>
+            <param name="salt"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XFree.Simple.Domain.SystemManagement.Organization.User.Login(XFree.Simple.Domain.Shared.Common.ErrorMessageService,System.String)">
+            <summary>
+            登录
+            </summary>
+            <param name="errorMessageService"></param>
+            <param name="password"></param>
+        </member>
+        <member name="T:XFree.Simple.Domain.SystemManagement.Organization.UserManager">
+            <summary>
+             用户管理者
+            </summary>
+        </member>
+        <member name="M:XFree.Simple.Domain.SystemManagement.Organization.UserManager.#ctor(Volo.Abp.Domain.Repositories.IRepository{XFree.Simple.Domain.SystemManagement.Organization.User,System.String},XFree.Simple.Domain.Shared.Common.ErrorMessageService)">
+            <summary>
+            
+            </summary>
+            <param name="userRepository"></param>
+            <param name="errorMessageService"></param>
+        </member>
+        <member name="M:XFree.Simple.Domain.SystemManagement.Organization.UserManager.New">
+            <summary>
+            新建用户实例
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:XFree.Simple.Domain.SystemManagement.Organization.UserManager.CreateUserAsync(XFree.Simple.Domain.SystemManagement.Organization.User)">
+            <summary>
+             新增用户
+            </summary>
+            <param name="user"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XFree.Simple.Domain.SystemManagement.Organization.UserManager.UpdateUserAsync(XFree.Simple.Domain.SystemManagement.Organization.User)">
+            <summary>
+             更新
+            </summary>
+            <param name="user"></param>
+            <returns></returns>
+        </member>
+        <member name="T:XFree.Simple.Domain.SystemManagement.Permission.BackgroundApi">
+            <summary>
+            接口资源
+            </summary>
+        </member>
+        <member name="M:XFree.Simple.Domain.SystemManagement.Permission.BackgroundApi.#ctor(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="id"></param>
+        </member>
+        <member name="P:XFree.Simple.Domain.SystemManagement.Permission.BackgroundApi.TenantId">
+            <summary>
+            租户Id
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Domain.SystemManagement.Permission.BackgroundApi.PrimaryNode">
+            <summary>
+             一级节点
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Domain.SystemManagement.Permission.BackgroundApi.Module">
+            <summary>
+             模块
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Domain.SystemManagement.Permission.BackgroundApi.ParentPermissionCode">
+            <summary>
+            父节点权限编码
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Domain.SystemManagement.Permission.BackgroundApi.PermissionCode">
+            <summary>
+            权限编码
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Domain.SystemManagement.Permission.BackgroundApi.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Domain.SystemManagement.Permission.BackgroundApi.EnName">
+            <summary>
+            英文名称
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Domain.SystemManagement.Permission.BackgroundApi.Path">
+            <summary>
+            接口路径
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Domain.SystemManagement.Permission.BackgroundApi.Method">
+            <summary>
+            方法
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Domain.SystemManagement.Permission.BackgroundApi.SortOrder">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Domain.SystemManagement.Permission.BackgroundApi.MultiTenancySides">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:XFree.Simple.Domain.SystemManagement.Permission.DepartRole">
+            <summary>
+             部门角色表
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Domain.SystemManagement.Permission.DepartRole.TenantId">
+            <summary>
+            租户Id
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Domain.SystemManagement.Permission.DepartRole.DepartId">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Domain.SystemManagement.Permission.DepartRole.RoleId">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:XFree.Simple.Domain.SystemManagement.Permission.Role">
+            <summary>
+            角色信息
+            </summary>
+        </member>
+        <member name="M:XFree.Simple.Domain.SystemManagement.Permission.Role.#ctor(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="id"></param>
+        </member>
+        <member name="P:XFree.Simple.Domain.SystemManagement.Permission.Role.TenantId">
+            <summary>
+            租户Id
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Domain.SystemManagement.Permission.Role.Code">
+            <summary>
+            角色编码
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Domain.SystemManagement.Permission.Role.Name">
+            <summary>
+            角色名称
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Domain.SystemManagement.Permission.Role.Memo">
+            <summary>
+            备注
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Domain.SystemManagement.Permission.Role.Status">
+            <summary>
+            状态
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Domain.SystemManagement.Permission.Role.RoleAccessType">
+            <summary>
+            可访问权限类型
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Domain.SystemManagement.Permission.Role.AccessValue">
+            <summary>
+             访问权限编码
+            </summary>
+        </member>
+        <member name="T:XFree.Simple.Domain.SystemManagement.Permission.RoleManager">
+            <summary>
+            角色管理者
+            </summary>
+        </member>
+        <member name="M:XFree.Simple.Domain.SystemManagement.Permission.RoleManager.#ctor(Volo.Abp.Domain.Repositories.IRepository{XFree.Simple.Domain.SystemManagement.Permission.Role,System.String},XFree.Simple.Domain.Shared.Common.ErrorMessageService)">
+            <summary>
+            
+            </summary>
+            <param name="roleRepository"></param>
+            <param name="errorMessageService"></param>
+        </member>
+        <member name="M:XFree.Simple.Domain.SystemManagement.Permission.RoleManager.CreateRoleAsync(XFree.Simple.Domain.SystemManagement.Permission.Role)">
+            <summary>
+             创建角色
+            </summary>
+            <param name="role"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XFree.Simple.Domain.SystemManagement.Permission.RoleManager.UpdateRoleAsync(XFree.Simple.Domain.SystemManagement.Permission.Role)">
+            <summary>
+             更新角色信息
+            </summary>
+            <param name="role"></param>
+            <returns></returns>
+        </member>
+        <member name="T:XFree.Simple.Domain.SystemManagement.Permission.RoleUiPermission">
+            <summary>
+             角色权限关联表
+            </summary>
+        </member>
+        <member name="M:XFree.Simple.Domain.SystemManagement.Permission.RoleUiPermission.#ctor(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="id"></param>
+        </member>
+        <member name="P:XFree.Simple.Domain.SystemManagement.Permission.RoleUiPermission.TenantId">
+            <summary>
+            租户Id
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Domain.SystemManagement.Permission.RoleUiPermission.RoleId">
+            <summary>
+            角色Id
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Domain.SystemManagement.Permission.RoleUiPermission.UiPermissionId">
+            <summary>
+            权限Id
+            </summary>
+        </member>
+        <member name="T:XFree.Simple.Domain.SystemManagement.Permission.UiPermission">
+            <summary>
+            Ui菜单权限
+            </summary>
+        </member>
+        <member name="M:XFree.Simple.Domain.SystemManagement.Permission.UiPermission.#ctor(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="id"></param>
+        </member>
+        <member name="P:XFree.Simple.Domain.SystemManagement.Permission.UiPermission.TenantId">
+            <summary>
+            租户Id
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Domain.SystemManagement.Permission.UiPermission.ParentId">
+            <summary>
+            父id
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Domain.SystemManagement.Permission.UiPermission.Name">
+            <summary>
+            菜单标题
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Domain.SystemManagement.Permission.UiPermission.EnName">
+            <summary>
+            菜单英文标题
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Domain.SystemManagement.Permission.UiPermission.Url">
+            <summary>
+            路径
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Domain.SystemManagement.Permission.UiPermission.ComponentName">
+            <summary>
+            组件名称
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Domain.SystemManagement.Permission.UiPermission.Component">
+            <summary>
+            组件
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Domain.SystemManagement.Permission.UiPermission.Redirect">
+            <summary>
+            一级菜单跳转地址
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Domain.SystemManagement.Permission.UiPermission.UiMenuType">
+            <summary>
+            菜单类型(0:一级菜单; 1:子菜单:2:按钮权限)
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Domain.SystemManagement.Permission.UiPermission.Perms">
+            <summary>
+            菜单权限编码
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Domain.SystemManagement.Permission.UiPermission.PermsType">
+            <summary>
+            权限策略1显示2禁用
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Domain.SystemManagement.Permission.UiPermission.SortOrder">
+            <summary>
+            菜单排序
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Domain.SystemManagement.Permission.UiPermission.Icon">
+            <summary>
+            菜单图标
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Domain.SystemManagement.Permission.UiPermission.IsRoute">
+            <summary>
+            是否路由菜单: 0:不是  1:是（默认值1）
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Domain.SystemManagement.Permission.UiPermission.IsLeaf">
+            <summary>
+            是否叶子节点:    1:是   0:不是
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Domain.SystemManagement.Permission.UiPermission.KeepAlive">
+            <summary>
+            是否缓存该页面:    1:是   0:不是
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Domain.SystemManagement.Permission.UiPermission.Hidden">
+            <summary>
+            是否隐藏路由: 0否,1是
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Domain.SystemManagement.Permission.UiPermission.Description">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Domain.SystemManagement.Permission.UiPermission.Enabled">
+            <summary>
+            按钮权限状态(0无效1有效)
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Domain.SystemManagement.Permission.UiPermission.OpenMode">
+            <summary>
+            菜单打开方式 0/内部打开 1/外部打开
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Domain.SystemManagement.Permission.UiPermission.MultiTenancySides">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:XFree.Simple.Domain.SystemManagement.Permission.UiPermissionManager">
+            <summary>
+             Ui菜单权限管理者
+            </summary>
+        </member>
+        <member name="M:XFree.Simple.Domain.SystemManagement.Permission.UiPermissionManager.#ctor(Volo.Abp.Domain.Repositories.IRepository{XFree.Simple.Domain.SystemManagement.Permission.UiPermission,System.String})">
+            <summary>
+            
+            </summary>
+            <param name="uiPermissionRepository"></param>
+        </member>
+        <member name="M:XFree.Simple.Domain.SystemManagement.Permission.UiPermissionManager.SetParentIsLeaf(System.String)">
+            <summary>
+            设置父节点的叶子节点状态
+            </summary>
+            <param name="parentId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XFree.Simple.Domain.SystemManagement.Permission.UiPermissionManager.SetParentIsLeaf(System.String,System.String)">
+            <summary>
+            设置父节点的叶子节点状态
+            </summary>
+            <param name="oldId"></param>
+            <param name="parentId"></param>
+            <returns></returns>
+        </member>
+        <member name="T:XFree.Simple.Domain.SystemManagement.Permission.UiWithApi">
+            <summary>
+             Ui关联接口资源
+            </summary>
+        </member>
+        <member name="M:XFree.Simple.Domain.SystemManagement.Permission.UiWithApi.#ctor(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="id"></param>
+        </member>
+        <member name="P:XFree.Simple.Domain.SystemManagement.Permission.UiWithApi.TenantId">
+            <summary>
+            租户Id
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Domain.SystemManagement.Permission.UiWithApi.UiPermissionId">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Domain.SystemManagement.Permission.UiWithApi.PermissionCode">
+            <summary>
+            接口资源编码
+            </summary>
+        </member>
+        <member name="T:XFree.Simple.Domain.SystemManagement.Permission.UserRole">
+            <summary>
+             用户角色
+            </summary>
+        </member>
+        <member name="M:XFree.Simple.Domain.SystemManagement.Permission.UserRole.#ctor(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="id"></param>
+        </member>
+        <member name="P:XFree.Simple.Domain.SystemManagement.Permission.UserRole.TenantId">
+            <summary>
+            租户Id
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Domain.SystemManagement.Permission.UserRole.UserId">
+            <summary>
+            员工Id
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Domain.SystemManagement.Permission.UserRole.RoleId">
+            <summary>
+            角色Id
+            </summary>
+        </member>
+        <member name="T:XFree.Simple.Domain.SystemManagement.Permission.UserRoleManager">
+            <summary>
+            用户角色管理者
+            </summary>
+        </member>
+        <member name="M:XFree.Simple.Domain.SystemManagement.Permission.UserRoleManager.#ctor(Volo.Abp.Domain.Repositories.IRepository{XFree.Simple.Domain.SystemManagement.Permission.UserRole,System.String})">
+            <summary>
+            
+            </summary>
+            <param name="userRoleRepository"></param>
+        </member>
+        <member name="M:XFree.Simple.Domain.SystemManagement.Permission.UserRoleManager.SetUserRole(System.String,System.Collections.Generic.IEnumerable{System.String},System.Boolean)">
+            <summary>
+            设置用户角色
+            </summary>
+            <param name="userId"></param>
+            <param name="roleIds"></param>
+            <param name="isCreate"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XFree.Simple.Domain.SystemManagement.Permission.UserRoleManager.GetUserRoles(System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            获取用户角色列表
+            </summary>
+            <param name="userIds"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

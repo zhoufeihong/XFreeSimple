@@ -1,0 +1,44 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+	 <TargetFramework>netstandard2.0</TargetFramework>
+	 <RootNamespace>XFree.Simple.Application.Contracts</RootNamespace>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>XFree.Simple.Application.Contracts.xml</DocumentationFile>
+    <OutputPath></OutputPath>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DocumentationFile>XFree.Simple.Application.Contracts.xml</DocumentationFile>
+    <OutputPath></OutputPath>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="SystemManagement\Localization\ApplicationContracts\en.json" />
+    <None Remove="SystemManagement\Localization\ApplicationContracts\zh-Hans.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="SystemManagement\Localization\ApplicationContracts\en.json" />
+    <EmbeddedResource Include="SystemManagement\Localization\ApplicationContracts\Excel\user-en.json" />
+    <EmbeddedResource Include="SystemManagement\Localization\ApplicationContracts\Excel\user-zh-Hans.json" />
+    <EmbeddedResource Include="SystemManagement\Localization\ApplicationContracts\zh-Hans.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Volo.Abp.Ddd.Application" Version="4.4.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\XFree.Simple.Domain.Shared\0.XFree.Simple.Domain.Shared.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="XFree.Simple.Application.Contracts.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>

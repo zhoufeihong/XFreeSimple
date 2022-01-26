@@ -1,0 +1,17 @@
+{
+  "culture": "en",
+  "texts": {
+    "HttpException:100106": "Invalid Token!",
+    "HttpException:400": "isv.INVALID_PARAMETERS",
+    "HttpException:404": "Data not found!",
+    "HttpException:5001": "The function is not implemented. Contact your system administrator!",
+    "HttpException:500": "Service is abnormal. Please try again later!",
+    "EnumException:FriendlyExceptionCode:ExcelImport001": "Missing columns in import file :{0}",
+    "EnumException:FriendlyExceptionCode:ExcelImport002": "The import file is empty",
+    "EnumException:FriendlyExceptionCode:ExcelImport003": "The {0} row '{1}' column is incorrectly formatted",
+    "EnumException:FriendlyExceptionCode:ExcelImport004": "mport a maximum of {0} rows of data at a time",
+    "EnumException:FriendlyExceptionCode:ExcelImport005": "Please select a upload file",
+    "EnumException:FriendlyExceptionCode:TimeOut10061": "Operation timed out. Please try again later",
+    "EnumException:FriendlyExceptionCode:TimeOut10062": "Wait time out. Please try again later"
+  }
+}

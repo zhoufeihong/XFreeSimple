@@ -1,0 +1,30 @@
+﻿{
+  "culture": "zh-Hans",
+  "texts": {
+    "EnumException:SystemFriendlyExceptionCode:DuplicateMerchantName": "商户名称重复",
+    "EnumException:SystemFriendlyExceptionCode:DuplicateMerchantCode": "商户编码重复:{0}",
+    "EnumException:SystemFriendlyExceptionCode:MerchantError005": "商户数据已经进行初始化，数据库信息无法修改",
+    "EnumException:SystemFriendlyExceptionCode:DuplicateDictCode": "字典编码重复:{0}",
+    "EnumException:SystemFriendlyExceptionCode:DuplicateDictItemValue": "字典项编码重复:{0}",
+    "EnumException:SystemFriendlyExceptionCode:LoginError101": "用户不存在:{0}",
+    "EnumException:SystemFriendlyExceptionCode:LoginError102": "密码错误",
+    "EnumException:SystemFriendlyExceptionCode:LoginError103": "用户被禁用",
+    "EnumException:SystemFriendlyExceptionCode:LoginError104": "用户被锁定",
+    "EnumException:SystemFriendlyExceptionCode:LoginError106": "无效Token",
+    "EnumException:SystemFriendlyExceptionCode:LoginError107": "Token失效",
+    "EnumException:SystemFriendlyExceptionCode:LoginError108": "过期请重新登录",
+    "EnumException:SystemFriendlyExceptionCode:LoginError109": "没有访问权限",
+    "EnumException:SystemFriendlyExceptionCode:LoginError110": "租户不存在",
+    "EnumException:SystemFriendlyExceptionCode:LoginError111": "租户被禁用",
+    "EnumException:SystemFriendlyExceptionCode:UserError114": "用户账户重复",
+    "EnumException:SystemFriendlyExceptionCode:UserError115": "用户工号重复",
+    "EnumException:SystemFriendlyExceptionCode:UserError116": "部门编码不存在",
+    "EnumException:SystemFriendlyExceptionCode:UserError117": "职务编码不存在",
+    "EnumException:SystemFriendlyExceptionCode:UserError118": "角色编码不存在",
+    "EnumException:SystemFriendlyExceptionCode:UserError119": "管理员用户不能删除",
+    "EnumException:SystemFriendlyExceptionCode:DuplicateDepartCode201": "部门编码重复:{0}",
+    "EnumException:SystemFriendlyExceptionCode:DuplicateRoleCode301": "角色编码重复:{0}",
+    "EnumException:SystemFriendlyExceptionCode:DuplicatePostCode501": "职务编码重复:{0}",
+    "EnumException:SystemFriendlyExceptionCode:DuplicateDatabaseConnectionName601": "数据库连接名称重复"
+  }
+}

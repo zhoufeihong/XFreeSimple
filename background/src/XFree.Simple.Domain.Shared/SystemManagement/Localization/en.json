@@ -1,0 +1,30 @@
+{
+  "culture": "en",
+  "texts": {
+    "EnumException:SystemFriendlyExceptionCode:DuplicateMerchantName": "Duplicate Merchant name",
+    "EnumException:SystemFriendlyExceptionCode:DuplicateMerchantCode": "Duplicate merchant code :{0}",
+    "EnumException:SystemFriendlyExceptionCode:MerchantError005": "The merchant data has been initialized and the database information cannot be modified",
+    "EnumException:SystemFriendlyExceptionCode:DuplicateDictCode": "Dictionary encoding repeats :{0}",
+    "EnumException:SystemFriendlyExceptionCode:DuplicateDictItemValue": "Dictionary item encoding repeats :{0}",
+    "EnumException:SystemFriendlyExceptionCode:LoginError101": "User does not exist :{0}",
+    "EnumException:SystemFriendlyExceptionCode:LoginError102": "Password mistake",
+    "EnumException:SystemFriendlyExceptionCode:LoginError103": "User is disabled",
+    "EnumException:SystemFriendlyExceptionCode:LoginError104": "The user is locked",
+    "EnumException:SystemFriendlyExceptionCode:LoginError106": "Invalid Token",
+    "EnumException:SystemFriendlyExceptionCode:LoginError107": "Token failure",
+    "EnumException:SystemFriendlyExceptionCode:LoginError108": "Expired please log in again",
+    "EnumException:SystemFriendlyExceptionCode:LoginError109": "No access",
+    "EnumException:SystemFriendlyExceptionCode:LoginError110": "The tenant does not exist",
+    "EnumException:SystemFriendlyExceptionCode:LoginError111": "The tenant is disabled",
+    "EnumException:SystemFriendlyExceptionCode:UserError114": "Duplicate user accounts",
+    "EnumException:SystemFriendlyExceptionCode:UserError115": "Duplicate user id",
+    "EnumException:SystemFriendlyExceptionCode:UserError116": "The department code does not exist",
+    "EnumException:SystemFriendlyExceptionCode:UserError117": "Post code does not exist",
+    "EnumException:SystemFriendlyExceptionCode:UserError118": "Role Code does not exist",
+    "EnumException:SystemFriendlyExceptionCode:UserError119": "The administrator user cannot be deleted",
+    "EnumException:SystemFriendlyExceptionCode:DuplicateDepartCode201": "Duplicate department code :{0}",
+    "EnumException:SystemFriendlyExceptionCode:DuplicateRoleCode301": "Duplicate role code:{0}",
+    "EnumException:SystemFriendlyExceptionCode:DuplicatePostCode501": "Duplicate job code :{0}",
+    "EnumException:SystemFriendlyExceptionCode:DuplicateDatabaseConnectionName601": "Duplicate database connection name"
+  }
+}

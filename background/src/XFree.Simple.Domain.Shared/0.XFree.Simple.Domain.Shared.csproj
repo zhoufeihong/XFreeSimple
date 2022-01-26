@@ -1,0 +1,28 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+	 <TargetFramework>netstandard2.0</TargetFramework>
+	 <RootNamespace>XFree.Simple.Domain.Shared</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Common\Localization\en.json" />
+    <None Remove="Common\Localization\zh-Hans.json" />
+    <None Remove="SystemManagement\Localization\en.json" />
+    <None Remove="SystemManagement\Localization\zh-Hans.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Common\Localization\en.json" />
+    <EmbeddedResource Include="Common\Localization\zh-Hans.json" />
+    <EmbeddedResource Include="SystemManagement\Localization\en.json" />
+    <EmbeddedResource Include="SystemManagement\Localization\zh-Hans.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Volo.Abp.Ddd.Domain" Version="4.4.3" />
+    <PackageReference Include="Volo.Abp.Localization" Version="4.4.3" />
+    <PackageReference Include="Volo.Abp.MultiTenancy" Version="4.4.3" />
+  </ItemGroup>
+
+</Project>

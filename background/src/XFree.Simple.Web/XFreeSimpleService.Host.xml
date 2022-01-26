@@ -1,0 +1,405 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>XFreeSimpleService.Host</name>
+    </assembly>
+    <members>
+        <member name="T:XFree.SimpleService.Host.Common.Attributes.NoWrapResultAttribute">
+            <summary>
+            不需要统一返回结果特性
+            </summary>
+        </member>
+        <member name="T:XFree.SimpleService.Host.Common.Filters.ResultExceptionFilter">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:XFree.SimpleService.Host.Common.Filters.ResultExceptionFilter.#ctor(Volo.Abp.AspNetCore.ExceptionHandling.IExceptionToErrorInfoConverter,Volo.Abp.AspNetCore.ExceptionHandling.IHttpExceptionStatusCodeFinder,Volo.Abp.Json.IJsonSerializer,Microsoft.Extensions.Options.IOptions{Volo.Abp.AspNetCore.ExceptionHandling.AbpExceptionHandlingOptions},Microsoft.Extensions.Localization.IStringLocalizerFactory)">
+            <summary>
+            
+            </summary>
+            <param name="errorInfoConverter"></param>
+            <param name="statusCodeFinder"></param>
+            <param name="jsonSerializer"></param>
+            <param name="exceptionHandlingOptions"></param>
+            <param name="stringLocalizerFactory"></param>
+        </member>
+        <member name="M:XFree.SimpleService.Host.Common.Filters.ResultExceptionFilter.OnExceptionAsync(Microsoft.AspNetCore.Mvc.Filters.ExceptionContext)">
+            <summary>
+            
+            </summary>
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XFree.SimpleService.Host.Common.Filters.ResultExceptionFilter.ShouldHandleException(Microsoft.AspNetCore.Mvc.Filters.ExceptionContext)">
+            <summary>
+            
+            </summary>
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XFree.SimpleService.Host.Common.Filters.ResultExceptionFilter.HandleAndWrapException(Microsoft.AspNetCore.Mvc.Filters.ExceptionContext)">
+            <summary>
+            
+            </summary>
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XFree.SimpleService.Host.Common.Filters.ResultExceptionFilter.SimplifyMessage(System.Exception)">
+            <summary>
+            
+            </summary>
+            <param name="error"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XFree.SimpleService.Host.Common.Filters.ResultExceptionFilter.OnResultExecuting(Microsoft.AspNetCore.Mvc.Filters.ResultExecutingContext)">
+            <summary>
+            
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="M:XFree.SimpleService.Host.Common.Filters.ResultExceptionFilter.OnResultExecuted(Microsoft.AspNetCore.Mvc.Filters.ResultExecutedContext)">
+            <summary>
+            
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="M:XFree.SimpleService.Host.Common.Filters.ResultExceptionFilter.LS(System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="name"></param>
+            <param name="prefix"></param>
+            <returns></returns>
+        </member>
+        <member name="T:XFree.SimpleService.Host.Common.Serializer.DateTimeJsonConverter">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:XFree.SimpleService.Host.Common.Serializer.DateTimeJsonConverter.Read(System.Text.Json.Utf8JsonReader@,System.Type,System.Text.Json.JsonSerializerOptions)">
+            <summary>
+            
+            </summary>
+            <param name="reader"></param>
+            <param name="typeToConvert"></param>
+            <param name="options"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XFree.SimpleService.Host.Common.Serializer.DateTimeJsonConverter.Write(System.Text.Json.Utf8JsonWriter,System.DateTime,System.Text.Json.JsonSerializerOptions)">
+            <summary>
+            
+            </summary>
+            <param name="writer"></param>
+            <param name="value"></param>
+            <param name="options"></param>
+        </member>
+        <member name="T:XFree.SimpleService.Host.Controllers.HomeController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:XFree.SimpleService.Host.Controllers.HomeController.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:XFree.SimpleService.Host.Controllers.HomeController.Index">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:XFree.SimpleService.Host.DataSeeders.PlatformServiceDataSeeder">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:XFree.SimpleService.Host.DataSeeders.PlatformServiceDataSeeder.SeedAsync(Volo.Abp.Data.DataSeedContext)">
+            <summary>
+            
+            </summary>
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XFree.SimpleService.Host.DataSeeders.PlatformServiceDataSeeder.DbSchemaMigrator">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:XFree.SimpleService.Host.DataSeeders.PlatformServiceDataSeeder.AddPlatformAsync">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:XFree.SimpleService.Host.DataSeeders.TenantServiceDataSeeder">
+            <summary>
+             初始化商户信息
+            </summary>
+        </member>
+        <member name="M:XFree.SimpleService.Host.DataSeeders.TenantServiceDataSeeder.SeedAsync(Volo.Abp.Data.DataSeedContext)">
+            <summary>
+            
+            </summary>
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XFree.SimpleService.Host.DataSeeders.TenantServiceDataSeeder.DbSchemaMigrator">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:XFree.SimpleService.Host.DataSeeders.TenantServiceDataSeeder.AddTenantsAsync(Volo.Abp.Data.DataSeedContext)">
+            <summary>
+            
+            </summary>
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XFree.SimpleService.Host.DataSeeders.TenantServiceDataSeeder.AddUser(XFree.Simple.Domain.SystemManagement.Organization.Tenant,Volo.Abp.Uow.IUnitOfWork)">
+            <summary>
+            
+            </summary>
+            <param name="tenant"></param>
+            <param name="unitOfWork"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XFree.SimpleService.Host.DataSeeders.TenantServiceDataSeeder.AddDict(Volo.Abp.Uow.IUnitOfWork)">
+            <summary>
+            
+            </summary>
+            <param name="unitOfWork"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XFree.SimpleService.Host.DataSeeders.TenantServiceDataSeeder.AddPostDepart(Volo.Abp.Uow.IUnitOfWork)">
+            <summary>
+            
+            </summary>
+            <param name="unitOfWork"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XFree.SimpleService.Host.DataSeeders.TenantServiceDataSeeder.AddUiPermission(Volo.Abp.Uow.IUnitOfWork,System.Collections.Generic.List{XFree.Simple.Domain.SystemManagement.Permission.UiPermission},System.Collections.Generic.List{XFree.Simple.Domain.SystemManagement.Permission.BackgroundApi},System.Collections.Generic.List{XFree.Simple.Domain.SystemManagement.Permission.UiWithApi})">
+            <summary>
+            
+            </summary>
+            <param name="unitOfWork"></param>
+            <param name="uiPermissions"></param>
+            <param name="backgroundApis"></param>
+            <param name="uiWithApis"></param>
+            <returns></returns>
+        </member>
+        <member name="T:XFree.SimpleService.Host.EntityFrameworkCore.SystemServiceMigrationDbContext">
+            <summary>
+            数据库迁移更新DcContext定义
+            </summary>
+        </member>
+        <member name="M:XFree.SimpleService.Host.EntityFrameworkCore.SystemServiceMigrationDbContext.#ctor(Microsoft.EntityFrameworkCore.DbContextOptions{XFree.SimpleService.Host.EntityFrameworkCore.SystemServiceMigrationDbContext})">
+            <summary>
+            
+            </summary>
+            <param name="options"></param>
+        </member>
+        <member name="M:XFree.SimpleService.Host.EntityFrameworkCore.SystemServiceMigrationDbContext.OnModelCreating(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <summary>
+            
+            </summary>
+            <param name="modelBuilder"></param>
+        </member>
+        <member name="T:XFree.SimpleService.Host.EntityFrameworkCore.SystemServiceMigrationDbContextFactory">
+            <summary>
+            数据库迁移DcContext创建工厂
+            </summary>
+        </member>
+        <member name="M:XFree.SimpleService.Host.EntityFrameworkCore.SystemServiceMigrationDbContextFactory.CreateDbContext(System.String[])">
+            <summary>
+            
+            </summary>
+            <param name="args"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XFree.SimpleService.Host.EntityFrameworkCore.SystemServiceMigrationDbContextFactory.BuildConfiguration">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:XFree.SimpleService.Host.EntityFrameworkCore.CustomConventionSetBuilder">
+            <summary>
+             自定义默认数据类型定义
+            </summary>
+        </member>
+        <member name="M:XFree.SimpleService.Host.EntityFrameworkCore.CustomConventionSetBuilder.#ctor(Microsoft.EntityFrameworkCore.Metadata.Conventions.Infrastructure.ProviderConventionSetBuilderDependencies,Microsoft.EntityFrameworkCore.Metadata.Conventions.Infrastructure.RelationalConventionSetBuilderDependencies)">
+            <summary>
+            
+            </summary>
+            <param name="dependencies"></param>
+            <param name="relationalDependencies"></param>
+        </member>
+        <member name="M:XFree.SimpleService.Host.EntityFrameworkCore.CustomConventionSetBuilder.CreateConventionSet">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:XFree.SimpleService.Host.EntityFrameworkCore.StringDefaultLengthConvention">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:XFree.SimpleService.Host.EntityFrameworkCore.StringDefaultLengthConvention.ProcessPropertyAdded(Microsoft.EntityFrameworkCore.Metadata.Builders.IConventionPropertyBuilder,Microsoft.EntityFrameworkCore.Metadata.Conventions.IConventionContext{Microsoft.EntityFrameworkCore.Metadata.Builders.IConventionPropertyBuilder})">
+            <summary>
+            
+            </summary>
+            <param name="propertyBuilder"></param>
+            <param name="context"></param>
+        </member>
+        <member name="M:XFree.SimpleService.Host.EntityFrameworkCore.StringDefaultLengthConvention.ProcessPropertyFieldChanged(Microsoft.EntityFrameworkCore.Metadata.Builders.IConventionPropertyBuilder,System.Reflection.FieldInfo,System.Reflection.FieldInfo,Microsoft.EntityFrameworkCore.Metadata.Conventions.IConventionContext{System.Reflection.FieldInfo})">
+            <summary>
+            
+            </summary>
+            <param name="propertyBuilder"></param>
+            <param name="newFieldInfo"></param>
+            <param name="oldFieldInfo"></param>
+            <param name="context"></param>
+        </member>
+        <member name="T:XFree.SimpleService.Host.EntityFrameworkCore.AddCommontConvention">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:XFree.SimpleService.Host.EntityFrameworkCore.AddCommontConvention.ProcessPropertyAdded(Microsoft.EntityFrameworkCore.Metadata.Builders.IConventionPropertyBuilder,Microsoft.EntityFrameworkCore.Metadata.Conventions.IConventionContext{Microsoft.EntityFrameworkCore.Metadata.Builders.IConventionPropertyBuilder})">
+            <summary>
+            
+            </summary>
+            <param name="propertyBuilder"></param>
+            <param name="context"></param>
+        </member>
+        <member name="M:XFree.SimpleService.Host.EntityFrameworkCore.AddCommontConvention.ProcessPropertyFieldChanged(Microsoft.EntityFrameworkCore.Metadata.Builders.IConventionPropertyBuilder,System.Reflection.FieldInfo,System.Reflection.FieldInfo,Microsoft.EntityFrameworkCore.Metadata.Conventions.IConventionContext{System.Reflection.FieldInfo})">
+            <summary>
+            
+            </summary>
+            <param name="propertyBuilder"></param>
+            <param name="newFieldInfo"></param>
+            <param name="oldFieldInfo"></param>
+            <param name="context"></param>
+        </member>
+        <member name="T:XFree.SimpleService.Host.Permission.AuthenticationExtesion">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:XFree.SimpleService.Host.Permission.AuthenticationExtesion.AddJwtBearerR(Microsoft.AspNetCore.Authentication.AuthenticationBuilder,System.String,System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="authenticationBuilder"></param>
+            <param name="rsaPublicKey"></param>
+            <param name="bearerAuthenticationScheme"></param>
+            <param name="subsystemAuthenticationScheme"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XFree.SimpleService.Host.Permission.AuthenticationExtesion.AddJwtSystemR(Microsoft.AspNetCore.Authentication.AuthenticationBuilder,System.String,System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="authenticationBuilder"></param>
+            <param name="rsaPublicKey"></param>
+            <param name="subsystemAuthenticationScheme"></param>
+            <param name="subSystemAuthenticationHeader"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XFree.SimpleService.Host.Permission.AuthenticationExtesion.GetRsaSecurityKey(System.String)">
+            <summary>
+             创建Rsa公钥
+            </summary>
+            <param name="publicKeyStr"></param>
+            <returns></returns>
+        </member>
+        <member name="T:XFree.SimpleService.Host.Permission.DefaultPermissionStore">
+            <summary>
+             默认权限校验实现
+            </summary>
+        </member>
+        <member name="M:XFree.SimpleService.Host.Permission.DefaultPermissionStore.IsGrantedAsync(System.String,System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="name"></param>
+            <param name="providerName"></param>
+            <param name="providerKey"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XFree.SimpleService.Host.Permission.DefaultPermissionStore.IsGrantedAsync(System.String[],System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="names"></param>
+            <param name="providerName"></param>
+            <param name="providerKey"></param>
+            <returns></returns>
+        </member>
+        <member name="T:XFree.SimpleService.Host.Program">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:XFree.SimpleService.Host.Program.Main(System.String[])">
+            <summary>
+            
+            </summary>
+            <param name="args"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XFree.SimpleService.Host.Program.CreateHostBuilder(System.String[])">
+            <summary>
+            
+            </summary>
+            <param name="args"></param>
+            <returns></returns>
+        </member>
+        <member name="T:XFree.SimpleService.Host.Startup">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:XFree.SimpleService.Host.Startup.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            
+            </summary>
+            <param name="services"></param>
+        </member>
+        <member name="M:XFree.SimpleService.Host.Startup.Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.AspNetCore.Hosting.IWebHostEnvironment,Microsoft.Extensions.Logging.ILoggerFactory)">
+            <summary>
+            
+            </summary>
+            <param name="app"></param>
+            <param name="env"></param>
+            <param name="loggerFactory"></param>
+        </member>
+        <member name="T:XFree.SimpleService.Host.SystemServiceHostModule">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:XFree.SimpleService.Host.SystemServiceHostModule.DefaultCorsPolicyName">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:XFree.SimpleService.Host.SystemServiceHostModule.ConfigureServices(Volo.Abp.Modularity.ServiceConfigurationContext)">
+            <summary>
+            
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="M:XFree.SimpleService.Host.SystemServiceHostModule.OnApplicationInitialization(Volo.Abp.ApplicationInitializationContext)">
+            <summary>
+            
+            </summary>
+            <param name="context"></param>
+        </member>
+    </members>
+</doc>

@@ -13,6 +13,8 @@ export default {
   data() {
     return {
       articleList: [
+        { title: 'Github XFreeSimple', href: 'https://github.com/zhoufeihong/XFreeSimple' },
+        { title: 'Gitee XFreeSimple', href: 'https://gitee.com/RiverBied/XFreeSimple' },
         { title: 'ABP', href: 'https://docs.abp.io/en/abp/latest' },
         { title: 'EF Core', href: 'https://docs.microsoft.com/en-us/ef/core/modeling/value-conversions?tabs=fluent-api' },
         { title: 'vue-element-admin', href: 'https://panjiachen.github.io/vue-element-admin-site/zh/' },

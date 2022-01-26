@@ -54,7 +54,7 @@ Docker Desktop安装可以参考: https://docs.docker.com/desktop/windows/instal
 
 #### 启动前端项目
 
-**使用Visual Code打开项目目录vue-element-admin **
+**使用Visual Code打开项目目录vue-element-admin**
 
 ![image-20220126185614101](docs/images/image-20220126185614101.png)
 
@@ -62,7 +62,7 @@ Docker Desktop安装可以参考: https://docs.docker.com/desktop/windows/instal
 
 ![image-20220126185815438](docs/images/image-20220126185815438.png)
 
-**安装依赖、启动项目 **
+**安装依赖、启动项目**
 
 ```bash
 # 安装依赖
@@ -103,4 +103,5 @@ npm run dev
 
 ![image-20220126192426556](docs/images/image-20220126192426556.png)
 租户管理界面
+
 ![image-20220126192540548](docs/images/image-20220126192540548.png)

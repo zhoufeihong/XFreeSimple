@@ -1,0 +1,2760 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>3.XFree.Simple.Application.Contracts</name>
+    </assembly>
+    <members>
+        <member name="T:XFree.Simple.Application.Contracts.ApplicationContractsModule">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:XFree.Simple.Application.Contracts.ApplicationContractsModule.ConfigureServices(Volo.Abp.Modularity.ServiceConfigurationContext)">
+            <summary>
+            
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="T:XFree.Simple.Application.Contracts.Common.ICodeGenerator">
+            <summary>
+             业务编码生成
+            </summary>
+        </member>
+        <member name="M:XFree.Simple.Application.Contracts.Common.ICodeGenerator.Create(System.String)">
+            <summary>
+            生成业务编码
+            </summary>
+            <param name="prefix">前缀</param>
+            <returns></returns>
+        </member>
+        <member name="T:XFree.Simple.Application.Contracts.Options.AuthenticationJwtOptions">
+            <summary>
+             权限认证配置项
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.Options.AuthenticationJwtOptions.BearerAuthenticationScheme">
+            <summary>
+             bearer认证方案
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.Options.AuthenticationJwtOptions.SubSystemAuthenticationScheme">
+            <summary>
+            子系统认证方案
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.Options.AuthenticationJwtOptions.SubSystemAuthenticationHeader">
+            <summary>
+             子系统请求头
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.Options.AuthenticationJwtOptions.BearerPublicKey">
+            <summary>
+            bearer认证方案的公钥
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.Options.AuthenticationJwtOptions.BearerPrivateKey">
+            <summary>
+            bearer认证方案的私钥
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.Options.AuthenticationJwtOptions.SubSystemPublicKey">
+            <summary>
+            子系统认证方案的公钥
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.Options.AuthenticationJwtOptions.SubSystemPrivateKey">
+            <summary>
+            子系统认证方案的私钥
+            </summary>
+        </member>
+        <member name="T:XFree.Simple.Application.Contracts.Options.StringEncryptionOptions">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.Options.StringEncryptionOptions.DatabaseConnectionStringPassPhrase">
+            <summary>
+             数据库连接字符串加解密密码
+            </summary>
+        </member>
+        <member name="T:XFree.Simple.Application.Contracts.SystemManagement.AppService.Authentication.Dto.UserLoginDto">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Authentication.Dto.UserLoginDto.LoginName">
+            <summary>
+            登录用户
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Authentication.Dto.UserLoginDto.Password">
+            <summary>
+            密码
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Authentication.Dto.UserLoginDto.TenantCode">
+            <summary>
+            租户编码
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Authentication.Dto.UserLoginDto.ReturnUserToken">
+            <summary>
+            是否返回UserToken
+            </summary>
+        </member>
+        <member name="T:XFree.Simple.Application.Contracts.SystemManagement.AppService.Authentication.Dto.UserLoginVo">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Authentication.Dto.UserLoginVo.UserToken">
+            <summary>
+             用户Token
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Authentication.Dto.UserLoginVo.TenantLanguage">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:XFree.Simple.Application.Contracts.SystemManagement.AppService.Authentication.Dto.UserPermisionInfo">
+            <summary>
+             用户权限信息
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Authentication.Dto.UserPermisionInfo.Id">
+            <summary>
+            用户Id
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Authentication.Dto.UserPermisionInfo.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Authentication.Dto.UserPermisionInfo.DepartId">
+            <summary>
+            部门Id
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Authentication.Dto.UserPermisionInfo.SupperUser">
+            <summary>
+            是否为管理员
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Authentication.Dto.UserPermisionInfo.Roles">
+            <summary>
+            角色信息
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Authentication.Dto.UserPermisionInfo.Avatar">
+            <summary>
+            图标
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Authentication.Dto.UserPermisionInfo.TenantLanguage">
+            <summary>
+             商户语言
+            </summary>
+        </member>
+        <member name="T:XFree.Simple.Application.Contracts.SystemManagement.AppService.Authentication.IAuthenticationAppService">
+            <summary>
+             权限接口
+            </summary>
+        </member>
+        <member name="M:XFree.Simple.Application.Contracts.SystemManagement.AppService.Authentication.IAuthenticationAppService.Login(XFree.Simple.Application.Contracts.SystemManagement.AppService.Authentication.Dto.UserLoginDto)">
+            <summary>
+            登录
+            </summary>
+            <param name="userLoginDto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XFree.Simple.Application.Contracts.SystemManagement.AppService.Authentication.IAuthenticationAppService.RefreshToken">
+            <summary>
+            刷新Token
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Common.DatabaseConnectionDto">
+            <summary>
+            数据库连接信息
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Common.DatabaseConnectionDto.Id">
+            <summary>
+            租户Id
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Common.DatabaseConnectionDto.DatabaseProviderType">
+            <summary>
+            0: NotSpecified
+            1: EntityFrameworkCore
+            2: MongoDb
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Common.DatabaseConnectionDto.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Common.DatabaseConnectionDto.Memo">
+            <summary>
+            备注
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Common.DatabaseConnectionDto.Status">
+            <summary>
+            状态
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Common.DatabaseConnectionDto.RangeTenantIds">
+            <summary>
+             限定商户范围,默认不限定
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Common.DatabaseConnectionDto.ConnectionString">
+            <summary>
+             数据库连接字符串
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Common.DatabaseConnectionDto.CreationTime">
+            <summary>
+             创建时间
+            </summary>
+        </member>
+        <member name="T:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Common.CreateDatabaseConnectionDto">
+            <summary>
+            创建租户
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Common.CreateDatabaseConnectionDto.DatabaseProviderType">
+            <summary>
+            0: NotSpecified
+            1: EntityFrameworkCore
+            2: MongoDb
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Common.CreateDatabaseConnectionDto.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Common.CreateDatabaseConnectionDto.Memo">
+            <summary>
+            备注
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Common.CreateDatabaseConnectionDto.RangeTenantIds">
+            <summary>
+             限定商户范围,默认不限定
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Common.CreateDatabaseConnectionDto.ConnectionString">
+            <summary>
+             数据库连接字符串
+            </summary>
+        </member>
+        <member name="T:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Common.UpdateDatabaseConnectionDto">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Common.UpdateDatabaseConnectionDto.DatabaseProviderType">
+            <summary>
+            0: NotSpecified
+            1: EntityFrameworkCore
+            2: MongoDb
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Common.UpdateDatabaseConnectionDto.Memo">
+            <summary>
+            备注
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Common.UpdateDatabaseConnectionDto.RangeTenantIds">
+            <summary>
+             限定商户范围,默认不限定
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Common.UpdateDatabaseConnectionDto.ConnectionString">
+            <summary>
+             数据库连接字符串
+            </summary>
+        </member>
+        <member name="T:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Common.UpdateDatabaseConnectionStatusDto">
+            <summary>
+            更新状态
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Common.UpdateDatabaseConnectionStatusDto.Status">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Common.DatabaseConnectionPagedAndSortedRequestDto">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Common.DatabaseConnectionPagedAndSortedRequestDto.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="T:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Common.DictDto">
+            <summary>
+            字典
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Common.DictDto.Id">
+            <summary>
+            字典Id
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Common.DictDto.DictCode">
+            <summary>
+            字典编码
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Common.DictDto.DictName">
+            <summary>
+            字典名称
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Common.DictDto.DictEnName">
+            <summary>
+            字典名称
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Common.DictDto.Description">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Common.DictDto.CreationTime">
+            <summary>
+             创建时间
+            </summary>
+        </member>
+        <member name="T:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Common.DictPagedAndSortedRequestDto">
+            <summary>
+            分页查询请求
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Common.DictPagedAndSortedRequestDto.DictCode">
+            <summary>
+            字典编码
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Common.DictPagedAndSortedRequestDto.DictName">
+            <summary>
+            字典名称
+            </summary>
+        </member>
+        <member name="T:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Common.DictItemPagedAndSortedResultRequestDto">
+            <summary>
+            字典项分页查询请求
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Common.DictItemPagedAndSortedResultRequestDto.DictId">
+            <summary>
+            字典Id
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Common.DictItemPagedAndSortedResultRequestDto.ItemValue">
+            <summary>
+            字典项值
+            </summary>
+        </member>
+        <member name="T:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Common.DictItemDto">
+            <summary>
+            字典项
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Common.DictItemDto.Id">
+            <summary>
+            字典项Id
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Common.DictItemDto.DictId">
+            <summary>
+            字典id
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Common.DictItemDto.ItemText">
+            <summary>
+            字典项文本
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Common.DictItemDto.ItemEnText">
+            <summary>
+            字典项英文文本
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Common.DictItemDto.ItemValue">
+            <summary>
+            字典项值
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Common.DictItemDto.Description">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Common.DictItemDto.SortOrder">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Common.DictItemDto.Enabled">
+            <summary>
+            状态（1启用 0不启用）
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Common.DictItemDto.CreationTime">
+            <summary>
+             创建时间
+            </summary>
+        </member>
+        <member name="T:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Common.UpdateDictItemStatusDto">
+            <summary>
+            更新状态
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Common.UpdateDictItemStatusDto.Enabled">
+            <summary>
+            状态（1启用 0不启用）
+            </summary>
+        </member>
+        <member name="T:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Organization.DepartDto">
+            <summary>
+            机构
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Organization.DepartDto.Id">
+            <summary>
+            机构Id
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Organization.DepartDto.ParentId">
+            <summary>
+            父机构ID
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Organization.DepartDto.OrgName">
+            <summary>
+            机构/部门名称
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Organization.DepartDto.OrgNameEn">
+            <summary>
+            英文名
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Organization.DepartDto.OrgCategory">
+            <summary>
+            机构类别 1组织机构，2岗位
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Organization.DepartDto.OrgLevelType">
+            <summary>
+            机构类型 1一级部门 2子部门
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Organization.DepartDto.OrgType">
+            <summary>
+             类型
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Organization.DepartDto.OrgCode">
+            <summary>
+            机构编码
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Organization.DepartDto.Contact">
+            <summary>
+            联系方式
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Organization.DepartDto.Memo">
+            <summary>
+            备注
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Organization.DepartDto.Status">
+            <summary>
+            状态
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Organization.DepartDto.SortOrder">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Organization.DepartDto.Address">
+            <summary>
+            地址
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Organization.DepartDto.CreationTime">
+            <summary>
+             创建时间
+            </summary>
+        </member>
+        <member name="T:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Organization.CreateDepartDto">
+            <summary>
+            创建机构
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Organization.CreateDepartDto.ParentId">
+            <summary>
+            父机构ID
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Organization.CreateDepartDto.OrgName">
+            <summary>
+            机构/部门名称
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Organization.CreateDepartDto.OrgNameEn">
+            <summary>
+            英文名
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Organization.CreateDepartDto.OrgCategory">
+            <summary>
+            机构类别 1组织机构，2岗位
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Organization.CreateDepartDto.OrgLevelType">
+            <summary>
+            机构类型 1一级部门 2子部门
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Organization.CreateDepartDto.OrgType">
+            <summary>
+             类型
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Organization.CreateDepartDto.OrgCode">
+            <summary>
+            机构编码
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Organization.CreateDepartDto.Contact">
+            <summary>
+            联系方式
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Organization.CreateDepartDto.Memo">
+            <summary>
+            备注
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Organization.CreateDepartDto.Status">
+            <summary>
+            状态
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Organization.CreateDepartDto.SortOrder">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Organization.CreateDepartDto.Address">
+            <summary>
+            地址
+            </summary>
+        </member>
+        <member name="T:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Organization.UpdateDepartDto">
+            <summary>
+            更新机构
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Organization.UpdateDepartDto.OrgName">
+            <summary>
+            机构/部门名称
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Organization.UpdateDepartDto.OrgNameEn">
+            <summary>
+            英文名
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Organization.UpdateDepartDto.OrgCategory">
+            <summary>
+            机构类别 1组织机构，2岗位
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Organization.UpdateDepartDto.OrgLevelType">
+            <summary>
+            机构类型 1一级部门 2子部门
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Organization.UpdateDepartDto.OrgType">
+            <summary>
+             类型
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Organization.UpdateDepartDto.OrgCode">
+            <summary>
+            机构编码
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Organization.UpdateDepartDto.Contact">
+            <summary>
+            联系方式
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Organization.UpdateDepartDto.Memo">
+            <summary>
+            备注
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Organization.UpdateDepartDto.Status">
+            <summary>
+            状态
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Organization.UpdateDepartDto.SortOrder">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Organization.UpdateDepartDto.Address">
+            <summary>
+            地址
+            </summary>
+        </member>
+        <member name="T:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Organization.DepartPagedAndSortedRequestDto">
+            <summary>
+            分页查询
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Organization.DepartPagedAndSortedRequestDto.OrgName">
+            <summary>
+            机构名称
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Organization.DepartPagedAndSortedRequestDto.OrgCode">
+            <summary>
+            机构编码
+            </summary>
+        </member>
+        <member name="T:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Organization.OperationInfoDto">
+            <summary>
+            操作信息
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Organization.OperationInfoDto.UserId">
+            <summary>
+            用户Id
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Organization.OperationInfoDto.Title">
+            <summary>
+            标题
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Organization.OperationInfoDto.Content">
+            <summary>
+             内容
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Organization.OperationInfoDto.Ip">
+            <summary>
+            ip地址
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Organization.OperationInfoDto.Address">
+            <summary>
+            登录地址
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Organization.OperationInfoDto.Status">
+            <summary>
+            状态(1-成功 2-失败)
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Organization.OperationInfoDto.StatusName">
+            <summary>
+             状态名称
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Organization.OperationInfoDto.CreationTime">
+            <summary>
+            时间
+            </summary>
+        </member>
+        <member name="T:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Organization.PostDto">
+            <summary>
+            职务
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Organization.PostDto.Id">
+            <summary>
+            职务Id
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Organization.PostDto.Code">
+            <summary>
+            编码
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Organization.PostDto.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Organization.PostDto.Memo">
+            <summary>
+            备注
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Organization.PostDto.Status">
+            <summary>
+            状态
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Organization.PostDto.SortOrder">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Organization.PostDto.CreationTime">
+            <summary>
+             创建时间
+            </summary>
+        </member>
+        <member name="T:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Organization.CreatePostDto">
+            <summary>
+            创建职务
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Organization.CreatePostDto.Id">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Organization.CreatePostDto.Code">
+            <summary>
+            编码
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Organization.CreatePostDto.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Organization.CreatePostDto.Memo">
+            <summary>
+            备注
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Organization.CreatePostDto.SortOrder">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Organization.CreatePostDto.CreationTime">
+            <summary>
+             创建时间
+            </summary>
+        </member>
+        <member name="T:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Organization.UpdatePostDto">
+            <summary>
+            更新职务
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Organization.UpdatePostDto.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Organization.UpdatePostDto.Memo">
+            <summary>
+            备注
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Organization.UpdatePostDto.SortOrder">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="T:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Organization.UpdatePostStatusDto">
+            <summary>
+            更新状态
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Organization.UpdatePostStatusDto.Status">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Organization.PostPagedAndSortedRequestDto">
+            <summary>
+            分页查询
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Organization.PostPagedAndSortedRequestDto.Name">
+            <summary>
+            职务名称
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Organization.PostPagedAndSortedRequestDto.Code">
+            <summary>
+            职务编码
+            </summary>
+        </member>
+        <member name="T:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Organization.TenantDto">
+            <summary>
+            租户
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Organization.TenantDto.Id">
+            <summary>
+            租户Id
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Organization.TenantDto.Code">
+            <summary>
+            编码
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Organization.TenantDto.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Organization.TenantDto.Phone">
+            <summary>
+            手机号
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Organization.TenantDto.Email">
+            <summary>
+            邮箱
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Organization.TenantDto.Memo">
+            <summary>
+             备注
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Organization.TenantDto.Status">
+            <summary>
+            状态
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Organization.TenantDto.DefaultConnectionStringName">
+            <summary>
+             数据库连接配置名称
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Organization.TenantDto.IsStandaloneDatabase">
+            <summary>
+             采用独立的数据库
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Organization.TenantDto.StandaloneDatabaseConnectionString">
+            <summary>
+             采用独立的数据库
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Organization.TenantDto.Language">
+            <summary>
+            语言
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Organization.TenantDto.CreationTime">
+            <summary>
+             创建时间
+            </summary>
+        </member>
+        <member name="T:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Organization.CreateTenantDto">
+            <summary>
+            创建租户
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Organization.CreateTenantDto.Code">
+            <summary>
+            编码
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Organization.CreateTenantDto.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Organization.CreateTenantDto.Phone">
+            <summary>
+            手机号
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Organization.CreateTenantDto.Email">
+            <summary>
+            邮箱
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Organization.CreateTenantDto.Memo">
+            <summary>
+             备注
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Organization.CreateTenantDto.Status">
+            <summary>
+            状态
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Organization.CreateTenantDto.DefaultConnectionStringName">
+            <summary>
+             数据库连接配置名称
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Organization.CreateTenantDto.IsStandaloneDatabase">
+            <summary>
+             采用独立的数据库
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Organization.CreateTenantDto.StandaloneDatabaseConnectionString">
+            <summary>
+             采用独立的数据库
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Organization.CreateTenantDto.Language">
+            <summary>
+            语言
+            </summary>
+        </member>
+        <member name="T:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Organization.UpdateTenantDto">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Organization.UpdateTenantDto.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Organization.UpdateTenantDto.Phone">
+            <summary>
+            手机号
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Organization.UpdateTenantDto.Email">
+            <summary>
+            邮箱
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Organization.UpdateTenantDto.Memo">
+            <summary>
+             备注
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Organization.UpdateTenantDto.Status">
+            <summary>
+            状态
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Organization.UpdateTenantDto.Language">
+            <summary>
+            语言
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Organization.UpdateTenantDto.DefaultConnectionStringName">
+            <summary>
+             数据库连接配置名称
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Organization.UpdateTenantDto.IsStandaloneDatabase">
+            <summary>
+             采用独立的数据库
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Organization.UpdateTenantDto.StandaloneDatabaseConnectionString">
+            <summary>
+             采用独立的数据库
+            </summary>
+        </member>
+        <member name="T:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Organization.UpdateTenantStatusDto">
+            <summary>
+            更新状态
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Organization.UpdateTenantStatusDto.Status">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Organization.TenantPagedAndSortedRequestDto">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Organization.TenantPagedAndSortedRequestDto.Code">
+            <summary>
+            编码
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Organization.TenantPagedAndSortedRequestDto.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="T:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Organization.UserPagedAndSortedRequestDto">
+            <summary>
+            分页请求
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Organization.UserPagedAndSortedRequestDto.Nickname">
+            <summary>
+            姓名
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Organization.UserPagedAndSortedRequestDto.LoginName">
+            <summary>
+            账号
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Organization.UserPagedAndSortedRequestDto.EmployeeIDNumber">
+            <summary>
+            工号
+            </summary>
+        </member>
+        <member name="T:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Organization.UserDto">
+            <summary>
+            用户
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Organization.UserDto.Id">
+            <summary>
+             用户Id
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Organization.UserDto.TenantId">
+            <summary>
+            租户Id
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Organization.UserDto.DepartId">
+            <summary>
+            部门Id
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Organization.UserDto.PostId">
+            <summary>
+            职务Id
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Organization.UserDto.LoginName">
+            <summary>
+            登录账号
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Organization.UserDto.Nickname">
+            <summary>
+            昵称/姓名
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Organization.UserDto.Avatar">
+            <summary>
+            头像
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Organization.UserDto.EmployeeIDNumber">
+            <summary>
+            工号
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Organization.UserDto.Birthday">
+            <summary>
+            生日
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Organization.UserDto.Sex">
+            <summary>
+            性别(0-默认未知,1-男,2-女)
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Organization.UserDto.UserType">
+            <summary>
+            账号类型: ( 1: 平台   2:租户用户)
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Organization.UserDto.Email">
+            <summary>
+            邮箱
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Organization.UserDto.Phone">
+            <summary>
+            电话
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Organization.UserDto.Memo">
+            <summary>
+             备注
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Organization.UserDto.Status">
+            <summary>
+            状态(1-正常,2-锁定)
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Organization.UserDto.LoginIp">
+            <summary>
+            最后登录ip
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Organization.UserDto.LockLogin">
+            <summary>
+            登录锁定
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Organization.UserDto.LoginDate">
+            <summary>
+            最后登录时间
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Organization.UserDto.PwdUpdateDate">
+            <summary>
+            最后密码更改时间
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Organization.UserDto.SupperUser">
+            <summary>
+             管理员
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Organization.UserDto.CreationTime">
+            <summary>
+             创建时间
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Organization.UserDto.RoleIds">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Organization.UserDto.RoleCodes">
+            <summary>
+            角色编码
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Organization.UserDto.DepartCode">
+            <summary>
+            部门编码
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Organization.UserDto.PostCode">
+            <summary>
+            职务编码
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Organization.UserDto.RoleNames">
+            <summary>
+             角色名称
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Organization.UserDto.PostName">
+            <summary>
+            职位名称
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Organization.UserDto.DepartName">
+            <summary>
+            部门名称
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Organization.UserDto.Password">
+            <summary>
+            密码
+            </summary>
+        </member>
+        <member name="T:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Organization.CreateUserDto">
+            <summary>
+            创建用户
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Organization.CreateUserDto.TenantId">
+            <summary>
+            租户Id
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Organization.CreateUserDto.DepartId">
+            <summary>
+            部门Id
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Organization.CreateUserDto.PostId">
+            <summary>
+            职务Id
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Organization.CreateUserDto.LoginName">
+            <summary>
+            登录账号
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Organization.CreateUserDto.Nickname">
+            <summary>
+            昵称/姓名
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Organization.CreateUserDto.Password">
+            <summary>
+            密码
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Organization.CreateUserDto.Avatar">
+            <summary>
+            头像
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Organization.CreateUserDto.EmployeeIDNumber">
+            <summary>
+            工号
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Organization.CreateUserDto.Birthday">
+            <summary>
+            生日
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Organization.CreateUserDto.Sex">
+            <summary>
+            性别(0-默认未知,1-男,2-女)
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Organization.CreateUserDto.UserType">
+            <summary>
+            账号类型
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Organization.CreateUserDto.Email">
+            <summary>
+            邮箱
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Organization.CreateUserDto.Phone">
+            <summary>
+            电话
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Organization.CreateUserDto.Memo">
+            <summary>
+             备注
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Organization.CreateUserDto.SupperUser">
+            <summary>
+             管理员
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Organization.CreateUserDto.RoleIds">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Organization.UpdateUserDto">
+            <summary>
+            更新用户
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Organization.UpdateUserDto.DepartId">
+            <summary>
+            部门Id
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Organization.UpdateUserDto.PostId">
+            <summary>
+            职务Id
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Organization.UpdateUserDto.Nickname">
+            <summary>
+            昵称/姓名
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Organization.UpdateUserDto.Avatar">
+            <summary>
+            头像
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Organization.UpdateUserDto.EmployeeIDNumber">
+            <summary>
+            工号
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Organization.UpdateUserDto.Birthday">
+            <summary>
+            生日
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Organization.UpdateUserDto.Sex">
+            <summary>
+            性别(0-默认未知,1-男,2-女)
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Organization.UpdateUserDto.UserType">
+            <summary>
+            账号类型: ( 1: 平台   2:租户用户)
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Organization.UpdateUserDto.Email">
+            <summary>
+            邮箱
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Organization.UpdateUserDto.Phone">
+            <summary>
+            电话
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Organization.UpdateUserDto.Memo">
+            <summary>
+             备注
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Organization.UpdateUserDto.RoleIds">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Organization.UpdateUserDto.SupperUser">
+            <summary>
+             管理员
+            </summary>
+        </member>
+        <member name="T:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Organization.UpdateUserPasswordDto">
+            <summary>
+            更新密码
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Organization.UpdateUserPasswordDto.OldPassword">
+            <summary>
+            旧密码
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Organization.UpdateUserPasswordDto.NewPassword">
+            <summary>
+            新密码
+            </summary>
+        </member>
+        <member name="T:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Organization.UpdateUserStatusDto">
+            <summary>
+            更新状态
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Organization.UpdateUserStatusDto.Status">
+            <summary>
+            状态
+            </summary>
+        </member>
+        <member name="T:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Permission.BackgroundApiDto">
+            <summary>
+            接口资源
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Permission.BackgroundApiDto.PrimaryNode">
+            <summary>
+             一级节点
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Permission.BackgroundApiDto.Module">
+            <summary>
+             模块
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Permission.BackgroundApiDto.ParentPermissionCode">
+            <summary>
+            父节点权限编码
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Permission.BackgroundApiDto.PermissionCode">
+            <summary>
+            权限编码
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Permission.BackgroundApiDto.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Permission.BackgroundApiDto.EnName">
+            <summary>
+            英文名称
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Permission.BackgroundApiDto.Path">
+            <summary>
+            接口路径
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Permission.BackgroundApiDto.Method">
+            <summary>
+            方法
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Permission.BackgroundApiDto.SortOrder">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="T:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Permission.RoleDto">
+            <summary>
+            角色
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Permission.RoleDto.Id">
+            <summary>
+            角色Id
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Permission.RoleDto.Code">
+            <summary>
+            角色编码
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Permission.RoleDto.Name">
+            <summary>
+            角色名称
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Permission.RoleDto.Memo">
+            <summary>
+            备注
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Permission.RoleDto.Status">
+            <summary>
+            状态
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Permission.RoleDto.CreationTime">
+            <summary>
+             创建时间
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Permission.RoleDto.RoleAccessType">
+            <summary>
+            可访问权限类型
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Permission.RoleDto.AccessValue">
+            <summary>
+             访问权限编码
+            </summary>
+        </member>
+        <member name="T:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Permission.CreateRoleDto">
+            <summary>
+            创建角色
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Permission.CreateRoleDto.Code">
+            <summary>
+            角色编码
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Permission.CreateRoleDto.Name">
+            <summary>
+            角色名称
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Permission.CreateRoleDto.Memo">
+            <summary>
+            备注
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Permission.CreateRoleDto.CreationTime">
+            <summary>
+             创建时间
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Permission.CreateRoleDto.RoleAccessType">
+            <summary>
+            可访问权限类型
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Permission.CreateRoleDto.AccessValue">
+            <summary>
+             访问权限编码
+            </summary>
+        </member>
+        <member name="T:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Permission.UpdateRoleDto">
+            <summary>
+            更新角色
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Permission.UpdateRoleDto.Name">
+            <summary>
+            角色名称
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Permission.UpdateRoleDto.Memo">
+            <summary>
+            备注
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Permission.UpdateRoleDto.RoleAccessType">
+            <summary>
+            可访问权限类型
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Permission.UpdateRoleDto.AccessValue">
+            <summary>
+             访问权限编码
+            </summary>
+        </member>
+        <member name="T:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Permission.UpdateRoleStatusDto">
+            <summary>
+            更新状态
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Permission.UpdateRoleStatusDto.Status">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Permission.RolePagedAndSortedRequestDto">
+            <summary>
+            分页请求
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Permission.RolePagedAndSortedRequestDto.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Permission.RolePagedAndSortedRequestDto.Code">
+            <summary>
+            编码
+            </summary>
+        </member>
+        <member name="T:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Permission.UiPermissionDto">
+            <summary>
+            Ui菜单权限
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Permission.UiPermissionDto.Id">
+            <summary>
+            Ui菜单权限Id
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Permission.UiPermissionDto.ParentId">
+            <summary>
+            父id
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Permission.UiPermissionDto.Name">
+            <summary>
+            菜单标题
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Permission.UiPermissionDto.EnName">
+            <summary>
+            菜单英文标题
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Permission.UiPermissionDto.Url">
+            <summary>
+            路径
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Permission.UiPermissionDto.ComponentName">
+            <summary>
+            组件名称
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Permission.UiPermissionDto.Component">
+            <summary>
+            组件
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Permission.UiPermissionDto.Redirect">
+            <summary>
+            一级菜单跳转地址
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Permission.UiPermissionDto.UiMenuType">
+            <summary>
+            菜单类型(0:一级菜单; 1:子菜单:2:按钮权限)
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Permission.UiPermissionDto.Perms">
+            <summary>
+            菜单权限编码
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Permission.UiPermissionDto.PermsType">
+            <summary>
+            权限策略1显示2禁用
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Permission.UiPermissionDto.SortOrder">
+            <summary>
+            菜单排序
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Permission.UiPermissionDto.Icon">
+            <summary>
+            菜单图标
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Permission.UiPermissionDto.IsRoute">
+            <summary>
+            是否路由菜单: 0:不是  1:是（默认值1）
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Permission.UiPermissionDto.IsLeaf">
+            <summary>
+            是否叶子节点:    1:是   0:不是
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Permission.UiPermissionDto.KeepAlive">
+            <summary>
+            是否缓存该页面:    1:是   0:不是
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Permission.UiPermissionDto.Hidden">
+            <summary>
+            是否隐藏路由: 0否,1是
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Permission.UiPermissionDto.Description">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Permission.UiPermissionDto.Enabled">
+            <summary>
+            按钮权限状态(0无效1有效)
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Permission.UiPermissionDto.OpenMode">
+            <summary>
+            菜单打开方式 0/内部打开 1/外部打开
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Permission.UiPermissionDto.CreationTime">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Permission.CreateUiPermissionDto">
+            <summary>
+            创建
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Permission.CreateUiPermissionDto.ParentId">
+            <summary>
+            父id
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Permission.CreateUiPermissionDto.Name">
+            <summary>
+            菜单标题
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Permission.CreateUiPermissionDto.EnName">
+            <summary>
+            菜单英文标题
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Permission.CreateUiPermissionDto.Url">
+            <summary>
+            路径
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Permission.CreateUiPermissionDto.ComponentName">
+            <summary>
+            组件名称
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Permission.CreateUiPermissionDto.Component">
+            <summary>
+            组件
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Permission.CreateUiPermissionDto.Redirect">
+            <summary>
+            一级菜单跳转地址
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Permission.CreateUiPermissionDto.UiMenuType">
+            <summary>
+            菜单类型(0:一级菜单; 1:子菜单:2:按钮权限)
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Permission.CreateUiPermissionDto.Perms">
+            <summary>
+            菜单权限编码
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Permission.CreateUiPermissionDto.PermsType">
+            <summary>
+            权限策略1显示2禁用
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Permission.CreateUiPermissionDto.SortOrder">
+            <summary>
+            菜单排序
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Permission.CreateUiPermissionDto.Icon">
+            <summary>
+            菜单图标
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Permission.CreateUiPermissionDto.IsRoute">
+            <summary>
+            是否路由菜单: 0:不是  1:是（默认值1）
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Permission.CreateUiPermissionDto.KeepAlive">
+            <summary>
+            是否缓存该页面:    1:是   0:不是
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Permission.CreateUiPermissionDto.Hidden">
+            <summary>
+            是否隐藏路由: 0否,1是
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Permission.CreateUiPermissionDto.Description">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Permission.CreateUiPermissionDto.Enabled">
+            <summary>
+            按钮权限状态(0无效1有效)
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Permission.CreateUiPermissionDto.OpenMode">
+            <summary>
+            菜单打开方式 0/内部打开 1/外部打开
+            </summary>
+        </member>
+        <member name="T:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Permission.UpdateUiPermissionDto">
+            <summary>
+            更新
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Permission.UpdateUiPermissionDto.ParentId">
+            <summary>
+            父id
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Permission.UpdateUiPermissionDto.Name">
+            <summary>
+            菜单标题
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Permission.UpdateUiPermissionDto.EnName">
+            <summary>
+            菜单英文标题
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Permission.UpdateUiPermissionDto.Url">
+            <summary>
+            路径
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Permission.UpdateUiPermissionDto.ComponentName">
+            <summary>
+            组件名称
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Permission.UpdateUiPermissionDto.Component">
+            <summary>
+            组件
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Permission.UpdateUiPermissionDto.Redirect">
+            <summary>
+            一级菜单跳转地址
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Permission.UpdateUiPermissionDto.UiMenuType">
+            <summary>
+            菜单类型(0:一级菜单; 1:子菜单:2:按钮权限)
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Permission.UpdateUiPermissionDto.Perms">
+            <summary>
+            菜单权限编码
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Permission.UpdateUiPermissionDto.PermsType">
+            <summary>
+            权限策略1显示2禁用
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Permission.UpdateUiPermissionDto.SortOrder">
+            <summary>
+            菜单排序
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Permission.UpdateUiPermissionDto.Icon">
+            <summary>
+            菜单图标
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Permission.UpdateUiPermissionDto.IsRoute">
+            <summary>
+            是否路由菜单: 0:不是  1:是（默认值1）
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Permission.UpdateUiPermissionDto.KeepAlive">
+            <summary>
+            是否缓存该页面:    1:是   0:不是
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Permission.UpdateUiPermissionDto.Hidden">
+            <summary>
+            是否隐藏路由: 0否,1是
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Permission.UpdateUiPermissionDto.Description">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Permission.UpdateUiPermissionDto.Enabled">
+            <summary>
+            按钮权限状态(0无效1有效)
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Permission.UpdateUiPermissionDto.OpenMode">
+            <summary>
+            菜单打开方式 0/内部打开 1/外部打开
+            </summary>
+        </member>
+        <member name="T:XFree.Simple.Application.Contracts.SystemManagement.AppService.IDatabaseConnectionAppService">
+            <summary>
+            数据库连接信息接口
+            </summary>
+        </member>
+        <member name="M:XFree.Simple.Application.Contracts.SystemManagement.AppService.IDatabaseConnectionAppService.GetListPagedAsync(XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Common.DatabaseConnectionPagedAndSortedRequestDto)">
+            <summary>
+            分页查询
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XFree.Simple.Application.Contracts.SystemManagement.AppService.IDatabaseConnectionAppService.GetListAsync">
+            <summary>
+            查询全部
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:XFree.Simple.Application.Contracts.SystemManagement.AppService.IDatabaseConnectionAppService.GetAsync(System.String)">
+            <summary>
+            主键获取
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XFree.Simple.Application.Contracts.SystemManagement.AppService.IDatabaseConnectionAppService.CreateAsync(XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Common.CreateDatabaseConnectionDto)">
+            <summary>
+            创建
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XFree.Simple.Application.Contracts.SystemManagement.AppService.IDatabaseConnectionAppService.UpdateAsync(System.String,XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Common.UpdateDatabaseConnectionDto)">
+            <summary>
+            更新
+            </summary>
+            <param name="id"></param>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XFree.Simple.Application.Contracts.SystemManagement.AppService.IDatabaseConnectionAppService.UpdateStatusAsync(System.String,XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Common.UpdateDatabaseConnectionStatusDto)">
+            <summary>
+            更新状态
+            </summary>
+            <param name="id"></param>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XFree.Simple.Application.Contracts.SystemManagement.AppService.IDatabaseConnectionAppService.DeleteAsync(System.String)">
+            <summary>
+            删除
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="T:XFree.Simple.Application.Contracts.SystemManagement.AppService.IDepartAppService">
+            <summary>
+            部门接口
+            </summary>
+        </member>
+        <member name="M:XFree.Simple.Application.Contracts.SystemManagement.AppService.IDepartAppService.CreateAsync(XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Organization.CreateDepartDto)">
+            <summary>
+            创建
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XFree.Simple.Application.Contracts.SystemManagement.AppService.IDepartAppService.GetListAsync">
+            <summary>
+            查询全部
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:XFree.Simple.Application.Contracts.SystemManagement.AppService.IDepartAppService.DeleteAsync(System.String)">
+            <summary>
+            删除
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XFree.Simple.Application.Contracts.SystemManagement.AppService.IDepartAppService.GetAsync(System.String)">
+            <summary>
+            主键获取
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XFree.Simple.Application.Contracts.SystemManagement.AppService.IDepartAppService.GetListPagedAsync(XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Organization.DepartPagedAndSortedRequestDto)">
+            <summary>
+            分页查询
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XFree.Simple.Application.Contracts.SystemManagement.AppService.IDepartAppService.UpdateAsync(System.String,XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Organization.UpdateDepartDto)">
+            <summary>
+            更新
+            </summary>
+            <param name="id"></param>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XFree.Simple.Application.Contracts.SystemManagement.AppService.IDepartAppService.GetUserListPagedAsync(System.String,XFree.Simple.Domain.Shared.Common.PagedAndSortedRequestDto)">
+            <summary>
+            分页查询部门下的用户
+            </summary>
+            <param name="departId"></param>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="T:XFree.Simple.Application.Contracts.SystemManagement.AppService.IDictAppService">
+            <summary>
+            字典接口
+            </summary>
+        </member>
+        <member name="M:XFree.Simple.Application.Contracts.SystemManagement.AppService.IDictAppService.GetListPagedAsync(XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Common.DictPagedAndSortedRequestDto)">
+            <summary>
+            分页查询
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XFree.Simple.Application.Contracts.SystemManagement.AppService.IDictAppService.GetListAsync">
+            <summary>
+            查询全部
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:XFree.Simple.Application.Contracts.SystemManagement.AppService.IDictAppService.GetAsync(System.String)">
+            <summary>
+            主键获取
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XFree.Simple.Application.Contracts.SystemManagement.AppService.IDictAppService.CreateAsync(XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Common.DictDto)">
+            <summary>
+            创建
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XFree.Simple.Application.Contracts.SystemManagement.AppService.IDictAppService.UpdateAsync(System.String,XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Common.DictDto)">
+            <summary>
+            更新
+            </summary>
+            <param name="id"></param>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XFree.Simple.Application.Contracts.SystemManagement.AppService.IDictAppService.DeleteAsync(System.String)">
+            <summary>
+            删除
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="T:XFree.Simple.Application.Contracts.SystemManagement.AppService.IDictItemAppService">
+            <summary>
+            字典项接口
+            </summary>
+        </member>
+        <member name="M:XFree.Simple.Application.Contracts.SystemManagement.AppService.IDictItemAppService.GetListPagedAsync(XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Common.DictItemPagedAndSortedResultRequestDto)">
+            <summary>
+            分页查询
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XFree.Simple.Application.Contracts.SystemManagement.AppService.IDictItemAppService.GetListAsync">
+            <summary>
+            获取全部
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:XFree.Simple.Application.Contracts.SystemManagement.AppService.IDictItemAppService.GetListAsync(System.String)">
+            <summary>
+            通过字典编码获取
+            </summary>
+            <param name="dictCode">字典编码</param>
+            <returns></returns>
+        </member>
+        <member name="M:XFree.Simple.Application.Contracts.SystemManagement.AppService.IDictItemAppService.GetAsync(System.String)">
+            <summary>
+            主键获取
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XFree.Simple.Application.Contracts.SystemManagement.AppService.IDictItemAppService.CreateAsync(XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Common.DictItemDto)">
+            <summary>
+            创建
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XFree.Simple.Application.Contracts.SystemManagement.AppService.IDictItemAppService.UpdateAsync(System.String,XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Common.DictItemDto)">
+            <summary>
+            更新
+            </summary>
+            <param name="id"></param>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XFree.Simple.Application.Contracts.SystemManagement.AppService.IDictItemAppService.DeleteAsync(System.String)">
+            <summary>
+            删除
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XFree.Simple.Application.Contracts.SystemManagement.AppService.IDictItemAppService.UpdateStatusAsync(System.String,XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Common.UpdateDictItemStatusDto)">
+            <summary>
+            更新状态
+            </summary>
+            <param name="id"></param>
+            <param name="updateDictItemStatusDto"></param>
+            <returns></returns>
+        </member>
+        <member name="T:XFree.Simple.Application.Contracts.SystemManagement.AppService.IPostAppService">
+            <summary>
+            职务接口
+            </summary>
+        </member>
+        <member name="M:XFree.Simple.Application.Contracts.SystemManagement.AppService.IPostAppService.CreateAsync(XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Organization.CreatePostDto)">
+            <summary>
+            创建
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XFree.Simple.Application.Contracts.SystemManagement.AppService.IPostAppService.GetListAsync">
+            <summary>
+            查询全部
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:XFree.Simple.Application.Contracts.SystemManagement.AppService.IPostAppService.DeleteAsync(System.String)">
+            <summary>
+            删除
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XFree.Simple.Application.Contracts.SystemManagement.AppService.IPostAppService.GetAsync(System.String)">
+            <summary>
+            主键获取
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XFree.Simple.Application.Contracts.SystemManagement.AppService.IPostAppService.GetListPagedAsync(XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Organization.PostPagedAndSortedRequestDto)">
+            <summary>
+            分页查询
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XFree.Simple.Application.Contracts.SystemManagement.AppService.IPostAppService.UpdateAsync(System.String,XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Organization.UpdatePostDto)">
+            <summary>
+            更新
+            </summary>
+            <param name="id"></param>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XFree.Simple.Application.Contracts.SystemManagement.AppService.IPostAppService.UpdateStatusAsync(System.String,XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Organization.UpdatePostStatusDto)">
+            <summary>
+            更新状态
+            </summary>
+            <param name="id"></param>
+            <param name="updatePostStatusDto"></param>
+            <returns></returns>
+        </member>
+        <member name="T:XFree.Simple.Application.Contracts.SystemManagement.AppService.IRoleAppService">
+            <summary>
+            角色接口
+            </summary>
+        </member>
+        <member name="M:XFree.Simple.Application.Contracts.SystemManagement.AppService.IRoleAppService.CreateAsync(XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Permission.CreateRoleDto)">
+            <summary>
+            创建
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XFree.Simple.Application.Contracts.SystemManagement.AppService.IRoleAppService.GetListAsync">
+            <summary>
+            查询全部
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:XFree.Simple.Application.Contracts.SystemManagement.AppService.IRoleAppService.DeleteAsync(System.String)">
+            <summary>
+            删除
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XFree.Simple.Application.Contracts.SystemManagement.AppService.IRoleAppService.GetAsync(System.String)">
+            <summary>
+            主键获取
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XFree.Simple.Application.Contracts.SystemManagement.AppService.IRoleAppService.GetListPagedAsync(XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Permission.RolePagedAndSortedRequestDto)">
+            <summary>
+            分页查询
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XFree.Simple.Application.Contracts.SystemManagement.AppService.IRoleAppService.UpdateAsync(System.String,XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Permission.UpdateRoleDto)">
+            <summary>
+            更新
+            </summary>
+            <param name="id"></param>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XFree.Simple.Application.Contracts.SystemManagement.AppService.IRoleAppService.UpdateStatusAsync(System.String,XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Permission.UpdateRoleStatusDto)">
+            <summary>
+            更新状态
+            </summary>
+            <param name="id"></param>
+            <param name="updateUserStatusDto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XFree.Simple.Application.Contracts.SystemManagement.AppService.IRoleAppService.GrantUiPermission(System.String,System.String[])">
+            <summary>
+            给角色授权
+            </summary>
+            <param name="id"></param>
+            <param name="permissionIds"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XFree.Simple.Application.Contracts.SystemManagement.AppService.IRoleAppService.QueryUiPermissionIds(System.String)">
+            <summary>
+            查询角色Ui菜单权限
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XFree.Simple.Application.Contracts.SystemManagement.AppService.IRoleAppService.QueryUsers(System.String)">
+            <summary>
+            查询角色下的用户
+            </summary>
+            <param name="roleId"></param>
+            <returns></returns>
+        </member>
+        <member name="T:XFree.Simple.Application.Contracts.SystemManagement.AppService.ITenantAppService">
+            <summary>
+            租户接口
+            </summary>
+        </member>
+        <member name="M:XFree.Simple.Application.Contracts.SystemManagement.AppService.ITenantAppService.GetListPagedAsync(XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Organization.TenantPagedAndSortedRequestDto)">
+            <summary>
+            分页查询
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XFree.Simple.Application.Contracts.SystemManagement.AppService.ITenantAppService.GetListAsync">
+            <summary>
+            查询全部
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:XFree.Simple.Application.Contracts.SystemManagement.AppService.ITenantAppService.GetAsync(System.String)">
+            <summary>
+            主键获取
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XFree.Simple.Application.Contracts.SystemManagement.AppService.ITenantAppService.GetByNameAsync(System.String)">
+            <summary>
+            名称获取
+            </summary>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XFree.Simple.Application.Contracts.SystemManagement.AppService.ITenantAppService.CreateAsync(XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Organization.CreateTenantDto)">
+            <summary>
+            创建
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XFree.Simple.Application.Contracts.SystemManagement.AppService.ITenantAppService.UpdateAsync(System.String,XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Organization.UpdateTenantDto)">
+            <summary>
+            更新
+            </summary>
+            <param name="id"></param>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XFree.Simple.Application.Contracts.SystemManagement.AppService.ITenantAppService.UpdateStatusAsync(System.String,XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Organization.UpdateTenantStatusDto)">
+            <summary>
+            更新状态
+            </summary>
+            <param name="id"></param>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XFree.Simple.Application.Contracts.SystemManagement.AppService.ITenantAppService.DeleteAsync(System.String)">
+            <summary>
+            删除
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="T:XFree.Simple.Application.Contracts.SystemManagement.AppService.IUiPermissionAppService">
+            <summary>
+            Ui菜单权限接口
+            </summary>
+        </member>
+        <member name="M:XFree.Simple.Application.Contracts.SystemManagement.AppService.IUiPermissionAppService.CreateAsync(XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Permission.CreateUiPermissionDto)">
+            <summary>
+            创建
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XFree.Simple.Application.Contracts.SystemManagement.AppService.IUiPermissionAppService.QueryAsync(System.String)">
+            <summary>
+            通过父节点查询Ui菜单权限
+            </summary>
+            <param name="parentId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XFree.Simple.Application.Contracts.SystemManagement.AppService.IUiPermissionAppService.DeleteAsync(System.String)">
+            <summary>
+            删除
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XFree.Simple.Application.Contracts.SystemManagement.AppService.IUiPermissionAppService.GetAsync(System.String)">
+            <summary>
+            主键获取
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XFree.Simple.Application.Contracts.SystemManagement.AppService.IUiPermissionAppService.UpdateAsync(System.String,XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Permission.UpdateUiPermissionDto)">
+            <summary>
+            更新
+            </summary>
+            <param name="id"></param>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XFree.Simple.Application.Contracts.SystemManagement.AppService.IUiPermissionAppService.GetListAsync">
+            <summary>
+            查询全部
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:XFree.Simple.Application.Contracts.SystemManagement.AppService.IUiPermissionAppService.BindBackgroundApi(System.String,System.String[])">
+            <summary>
+            分配接口资源
+            </summary>
+            <param name="id"></param>
+            <param name="permissionCodes"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XFree.Simple.Application.Contracts.SystemManagement.AppService.IUiPermissionAppService.QueryPermissionCodes(System.String)">
+            <summary>
+            查询接口资源
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XFree.Simple.Application.Contracts.SystemManagement.AppService.IUiPermissionAppService.GetAllBackgroundApiAsync">
+            <summary>
+            获取全部接口资源
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:XFree.Simple.Application.Contracts.SystemManagement.AppService.IUiPermissionAppService.RefreshBackgroundApiAsync">
+            <summary>
+            刷新接口资源
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:XFree.Simple.Application.Contracts.SystemManagement.AppService.IUiPermissionAppService.RemoveAllMemoryCache">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:XFree.Simple.Application.Contracts.SystemManagement.Permission.PlatformPermissions">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:XFree.Simple.Application.Contracts.SystemManagement.Permission.PlatformPermissions.GroupName">
+            <summary>
+            平台管理
+            </summary>
+        </member>
+        <member name="T:XFree.Simple.Application.Contracts.SystemManagement.Permission.PlatformPermissions.Base">
+            <summary>
+            平台基础权限
+            </summary>
+        </member>
+        <member name="F:XFree.Simple.Application.Contracts.SystemManagement.Permission.PlatformPermissions.Base.Default">
+            <summary>
+            默认
+            </summary>
+        </member>
+        <member name="F:XFree.Simple.Application.Contracts.SystemManagement.Permission.PlatformPermissions.Base.WithToken">
+            <summary>
+            要求带上有效Token
+            </summary>
+        </member>
+        <member name="T:XFree.Simple.Application.Contracts.SystemManagement.Permission.PlatformPermissions.Tenants">
+            <summary>
+            租户
+            </summary>
+        </member>
+        <member name="F:XFree.Simple.Application.Contracts.SystemManagement.Permission.PlatformPermissions.Tenants.Default">
+            <summary>
+            默认
+            </summary>
+        </member>
+        <member name="F:XFree.Simple.Application.Contracts.SystemManagement.Permission.PlatformPermissions.Tenants.Delete">
+            <summary>
+            删除
+            </summary>
+        </member>
+        <member name="F:XFree.Simple.Application.Contracts.SystemManagement.Permission.PlatformPermissions.Tenants.Update">
+            <summary>
+            更新
+            </summary>
+        </member>
+        <member name="F:XFree.Simple.Application.Contracts.SystemManagement.Permission.PlatformPermissions.Tenants.Create">
+            <summary>
+            创建
+            </summary>
+        </member>
+        <member name="M:XFree.Simple.Application.Contracts.SystemManagement.Permission.PlatformPermissions.GetAll">
+            <summary>
+            获取所有权限编码
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:XFree.Simple.Application.Contracts.SystemManagement.Permission.SystemManagementPermissionDefinitionProvider">
+            <summary>
+             权限资源定义
+            </summary>
+        </member>
+        <member name="M:XFree.Simple.Application.Contracts.SystemManagement.Permission.SystemManagementPermissionDefinitionProvider.Define(Volo.Abp.Authorization.Permissions.IPermissionDefinitionContext)">
+            <summary>
+            
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="T:XFree.Simple.Application.Contracts.SystemManagement.Permission.SystemManagementPermissions">
+            <summary>
+             权限资源编码定义
+            </summary>
+        </member>
+        <member name="F:XFree.Simple.Application.Contracts.SystemManagement.Permission.SystemManagementPermissions.GroupName">
+            <summary>
+            系统管理
+            </summary>
+        </member>
+        <member name="T:XFree.Simple.Application.Contracts.SystemManagement.Permission.SystemManagementPermissions.Base">
+            <summary>
+            基础权限
+            </summary>
+        </member>
+        <member name="F:XFree.Simple.Application.Contracts.SystemManagement.Permission.SystemManagementPermissions.Base.Default">
+            <summary>
+            默认
+            </summary>
+        </member>
+        <member name="F:XFree.Simple.Application.Contracts.SystemManagement.Permission.SystemManagementPermissions.Base.WithToken">
+            <summary>
+            要求带上有效Token
+            </summary>
+        </member>
+        <member name="F:XFree.Simple.Application.Contracts.SystemManagement.Permission.SystemManagementPermissions.Base.ChangePassword">
+            <summary>
+            修改密码
+            </summary>
+        </member>
+        <member name="T:XFree.Simple.Application.Contracts.SystemManagement.Permission.SystemManagementPermissions.Tenants">
+            <summary>
+            租户
+            </summary>
+        </member>
+        <member name="F:XFree.Simple.Application.Contracts.SystemManagement.Permission.SystemManagementPermissions.Tenants.Default">
+            <summary>
+            默认
+            </summary>
+        </member>
+        <member name="F:XFree.Simple.Application.Contracts.SystemManagement.Permission.SystemManagementPermissions.Tenants.Delete">
+            <summary>
+            删除
+            </summary>
+        </member>
+        <member name="F:XFree.Simple.Application.Contracts.SystemManagement.Permission.SystemManagementPermissions.Tenants.Update">
+            <summary>
+            更新
+            </summary>
+        </member>
+        <member name="F:XFree.Simple.Application.Contracts.SystemManagement.Permission.SystemManagementPermissions.Tenants.Create">
+            <summary>
+            创建
+            </summary>
+        </member>
+        <member name="T:XFree.Simple.Application.Contracts.SystemManagement.Permission.SystemManagementPermissions.Users">
+            <summary>
+            用户
+            </summary>
+        </member>
+        <member name="F:XFree.Simple.Application.Contracts.SystemManagement.Permission.SystemManagementPermissions.Users.Default">
+            <summary>
+            默认
+            </summary>
+        </member>
+        <member name="F:XFree.Simple.Application.Contracts.SystemManagement.Permission.SystemManagementPermissions.Users.Delete">
+            <summary>
+            删除
+            </summary>
+        </member>
+        <member name="F:XFree.Simple.Application.Contracts.SystemManagement.Permission.SystemManagementPermissions.Users.Update">
+            <summary>
+            更新
+            </summary>
+        </member>
+        <member name="F:XFree.Simple.Application.Contracts.SystemManagement.Permission.SystemManagementPermissions.Users.Create">
+            <summary>
+            创建
+            </summary>
+        </member>
+        <member name="F:XFree.Simple.Application.Contracts.SystemManagement.Permission.SystemManagementPermissions.Users.Export">
+            <summary>
+            导出
+            </summary>
+        </member>
+        <member name="F:XFree.Simple.Application.Contracts.SystemManagement.Permission.SystemManagementPermissions.Users.Import">
+            <summary>
+            导入
+            </summary>
+        </member>
+        <member name="F:XFree.Simple.Application.Contracts.SystemManagement.Permission.SystemManagementPermissions.Users.ResetPassword">
+            <summary>
+            重置密码
+            </summary>
+        </member>
+        <member name="T:XFree.Simple.Application.Contracts.SystemManagement.Permission.SystemManagementPermissions.Departs">
+            <summary>
+            部门
+            </summary>
+        </member>
+        <member name="F:XFree.Simple.Application.Contracts.SystemManagement.Permission.SystemManagementPermissions.Departs.Default">
+            <summary>
+            默认
+            </summary>
+        </member>
+        <member name="F:XFree.Simple.Application.Contracts.SystemManagement.Permission.SystemManagementPermissions.Departs.Delete">
+            <summary>
+            删除
+            </summary>
+        </member>
+        <member name="F:XFree.Simple.Application.Contracts.SystemManagement.Permission.SystemManagementPermissions.Departs.Update">
+            <summary>
+            更新
+            </summary>
+        </member>
+        <member name="F:XFree.Simple.Application.Contracts.SystemManagement.Permission.SystemManagementPermissions.Departs.Create">
+            <summary>
+            创建
+            </summary>
+        </member>
+        <member name="F:XFree.Simple.Application.Contracts.SystemManagement.Permission.SystemManagementPermissions.Departs.QueryUser">
+            <summary>
+            查询部门用户
+            </summary>
+        </member>
+        <member name="T:XFree.Simple.Application.Contracts.SystemManagement.Permission.SystemManagementPermissions.Dicts">
+            <summary>
+            字典
+            </summary>
+        </member>
+        <member name="F:XFree.Simple.Application.Contracts.SystemManagement.Permission.SystemManagementPermissions.Dicts.Default">
+            <summary>
+            默认
+            </summary>
+        </member>
+        <member name="F:XFree.Simple.Application.Contracts.SystemManagement.Permission.SystemManagementPermissions.Dicts.Delete">
+            <summary>
+            删除
+            </summary>
+        </member>
+        <member name="F:XFree.Simple.Application.Contracts.SystemManagement.Permission.SystemManagementPermissions.Dicts.Update">
+            <summary>
+            更新
+            </summary>
+        </member>
+        <member name="F:XFree.Simple.Application.Contracts.SystemManagement.Permission.SystemManagementPermissions.Dicts.Create">
+            <summary>
+            创建
+            </summary>
+        </member>
+        <member name="T:XFree.Simple.Application.Contracts.SystemManagement.Permission.SystemManagementPermissions.Posts">
+            <summary>
+            职务
+            </summary>
+        </member>
+        <member name="F:XFree.Simple.Application.Contracts.SystemManagement.Permission.SystemManagementPermissions.Posts.Default">
+            <summary>
+            默认
+            </summary>
+        </member>
+        <member name="F:XFree.Simple.Application.Contracts.SystemManagement.Permission.SystemManagementPermissions.Posts.Delete">
+            <summary>
+            删除
+            </summary>
+        </member>
+        <member name="F:XFree.Simple.Application.Contracts.SystemManagement.Permission.SystemManagementPermissions.Posts.Update">
+            <summary>
+            更新
+            </summary>
+        </member>
+        <member name="F:XFree.Simple.Application.Contracts.SystemManagement.Permission.SystemManagementPermissions.Posts.Create">
+            <summary>
+            创建
+            </summary>
+        </member>
+        <member name="T:XFree.Simple.Application.Contracts.SystemManagement.Permission.SystemManagementPermissions.Roles">
+            <summary>
+            角色
+            </summary>
+        </member>
+        <member name="F:XFree.Simple.Application.Contracts.SystemManagement.Permission.SystemManagementPermissions.Roles.Default">
+            <summary>
+            默认
+            </summary>
+        </member>
+        <member name="F:XFree.Simple.Application.Contracts.SystemManagement.Permission.SystemManagementPermissions.Roles.Delete">
+            <summary>
+            删除
+            </summary>
+        </member>
+        <member name="F:XFree.Simple.Application.Contracts.SystemManagement.Permission.SystemManagementPermissions.Roles.Update">
+            <summary>
+            更新
+            </summary>
+        </member>
+        <member name="F:XFree.Simple.Application.Contracts.SystemManagement.Permission.SystemManagementPermissions.Roles.Create">
+            <summary>
+            创建
+            </summary>
+        </member>
+        <member name="T:XFree.Simple.Application.Contracts.SystemManagement.Permission.SystemManagementPermissions.UiPermissions">
+            <summary>
+            Ui菜单权限
+            </summary>
+        </member>
+        <member name="F:XFree.Simple.Application.Contracts.SystemManagement.Permission.SystemManagementPermissions.UiPermissions.Default">
+            <summary>
+            默认
+            </summary>
+        </member>
+        <member name="F:XFree.Simple.Application.Contracts.SystemManagement.Permission.SystemManagementPermissions.UiPermissions.Delete">
+            <summary>
+            删除
+            </summary>
+        </member>
+        <member name="F:XFree.Simple.Application.Contracts.SystemManagement.Permission.SystemManagementPermissions.UiPermissions.Update">
+            <summary>
+            更新
+            </summary>
+        </member>
+        <member name="F:XFree.Simple.Application.Contracts.SystemManagement.Permission.SystemManagementPermissions.UiPermissions.Create">
+            <summary>
+            创建
+            </summary>
+        </member>
+        <member name="F:XFree.Simple.Application.Contracts.SystemManagement.Permission.SystemManagementPermissions.UiPermissions.RefreshBackgroundApi">
+            <summary>
+            刷新接口资源
+            </summary>
+        </member>
+        <member name="M:XFree.Simple.Application.Contracts.SystemManagement.Permission.SystemManagementPermissions.GetAll">
+            <summary>
+            获取所有权限编码
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:XFree.Simple.Application.Contracts.SystemManagement.Setting.SystemManagementSettingDefinitionProvider">
+            <summary>
+            默认配置
+            </summary>
+        </member>
+        <member name="M:XFree.Simple.Application.Contracts.SystemManagement.Setting.SystemManagementSettingDefinitionProvider.Define(Volo.Abp.Settings.ISettingDefinitionContext)">
+            <summary>
+            
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="T:XFree.Simple.Application.Contracts.SystemManagement.Setting.SystemManagementSettings">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:XFree.Simple.Application.Contracts.SystemManagement.Setting.SystemManagementSettings.GroupName">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:XFree.Simple.Application.Contracts.SystemManagement.Setting.SystemManagementSettings.MaxPageSize">
+            <summary>
+            Maximum allowed page size for paged list requests.
+            </summary>
+        </member>
+        <member name="T:XFree.Simple.Application.Contracts.SystemManage.AppService.IUserAppService">
+            <summary>
+            用户接口
+            </summary>
+        </member>
+        <member name="M:XFree.Simple.Application.Contracts.SystemManage.AppService.IUserAppService.CreateAsync(XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Organization.CreateUserDto)">
+            <summary>
+            创建
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XFree.Simple.Application.Contracts.SystemManage.AppService.IUserAppService.DeleteAsync(System.String)">
+            <summary>
+            删除
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XFree.Simple.Application.Contracts.SystemManage.AppService.IUserAppService.GetAsync(System.String)">
+            <summary>
+            主键获取
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XFree.Simple.Application.Contracts.SystemManage.AppService.IUserAppService.GetByTokenAsync">
+            <summary>
+            通过Token获取用户信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:XFree.Simple.Application.Contracts.SystemManage.AppService.IUserAppService.GetListPagedAsync(XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Organization.UserPagedAndSortedRequestDto)">
+            <summary>
+            分页查询
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XFree.Simple.Application.Contracts.SystemManage.AppService.IUserAppService.ImportAsync(System.Collections.Generic.List{XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Organization.UserDto})">
+            <summary>
+            导入
+            </summary>
+            <param name="inputs"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XFree.Simple.Application.Contracts.SystemManage.AppService.IUserAppService.GetExportListPagedAsync(XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Organization.UserPagedAndSortedRequestDto)">
+            <summary>
+            导出数据查询
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XFree.Simple.Application.Contracts.SystemManage.AppService.IUserAppService.UpdateAsync(System.String,XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Organization.UpdateUserDto)">
+            <summary>
+            更新
+            </summary>
+            <param name="id"></param>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XFree.Simple.Application.Contracts.SystemManage.AppService.IUserAppService.ResetPassword(System.String)">
+            <summary>
+             重置密码
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XFree.Simple.Application.Contracts.SystemManage.AppService.IUserAppService.UpdateStatusAsync(System.String,XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Organization.UpdateUserStatusDto)">
+            <summary>
+            更新状态
+            </summary>
+            <param name="id"></param>
+            <param name="updateUserStatusDto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XFree.Simple.Application.Contracts.SystemManage.AppService.IUserAppService.UpdatePasswordAsync(System.String,XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Organization.UpdateUserPasswordDto)">
+            <summary>
+            更新密码
+            </summary>
+            <param name="id"></param>
+            <param name="updateUserPasswordDto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XFree.Simple.Application.Contracts.SystemManage.AppService.IUserAppService.GetUserPermisionInfo">
+            <summary>
+            获取用户信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:XFree.Simple.Application.Contracts.SystemManage.AppService.IUserAppService.GetUiPermission">
+            <summary>
+            获取权限
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:XFree.Simple.Application.Contracts.SystemManage.AppService.IUserAppService.GetOperationInfoListPagedAsync(XFree.Simple.Domain.Shared.Common.PagedAndSortedRequestDto)">
+            <summary>
+            分页查询用户操作记录
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

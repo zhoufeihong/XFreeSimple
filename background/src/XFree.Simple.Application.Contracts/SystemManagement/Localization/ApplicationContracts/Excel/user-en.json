@@ -1,0 +1,20 @@
+﻿{
+  "culture": "en",
+  "texts": {
+    "Excel:User:Title": "UserInformation",
+    "Excel:User:TemplateTitle": "ImportUserInformationTemplate",
+    "Excel:User:*账号": "*Login Name",
+    "Excel:User:*姓名": "*Name",
+    "Excel:User:*工号": "*Employee number",
+    "Excel:User:性别(0:未知 1:男 2:女)": "Gender (0: unknown 1: male 2: female)",
+    "Excel:User:*部门编码": "Depart code",
+    "Excel:User:部门名称": "Depart name",
+    "Excel:User:职务编码": "Post code",
+    "Excel:User:职务名称": "Post name",
+    "Excel:User:角色编码": "Role code",
+    "Excel:User:角色名称": "Role name",
+    "Excel:User:*状态(1:正常 2:禁用)": "*Status(1:Normal 2:Disable)",
+    "Excel:User:*密码": "*Password",
+    "Excel:User:创建时间": "Creation time"
+  }
+}

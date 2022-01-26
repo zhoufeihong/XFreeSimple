@@ -1,0 +1,23 @@
+version: '3.7'
+
+services:
+
+  redis:
+    container_name: redis
+    image: redis
+    volumes:
+      - "./redis/datadir:/data"
+      - "./redis/conf/redis.conf:/usr/local/etc/redis/redis.conf"
+      - "./redis/logs:/logs"
+    command:
+      /bin/bash -c "redis-server /usr/local/etc/redis/redis.conf"      
+    
+  mysql-db:
+    build:
+      context: .
+      dockerfile: mysql/Dockerfile
+    image: mysql:8.0.1
+    container_name: mysql-xfree-simple                      
+    volumes:
+      - "./mysql/data:/var/lib/mysql"           
+      - "./mysql/config:/etc/mysql/conf.d"     

@@ -1,0 +1,17 @@
+﻿{
+  "culture": "zh-Hans",
+  "texts": {
+    "HttpException:100106": "无效Token！",
+    "HttpException:400": "参数异常",
+    "HttpException:404": "数据未找到！",
+    "HttpException:5001": "功能暂未实现，请联系系统管理员！",
+    "HttpException:500": "服务异常,请稍后重试！",
+    "EnumException:FriendlyExceptionCode:ExcelImport001": "导入文件缺少列:{0}",
+    "EnumException:FriendlyExceptionCode:ExcelImport002": "导入文件为空",
+    "EnumException:FriendlyExceptionCode:ExcelImport003": "{0}行'{1}'列格式不正确",
+    "EnumException:FriendlyExceptionCode:ExcelImport004": "一次最多导入{0}行数据",
+    "EnumException:FriendlyExceptionCode:ExcelImport005": "请选择上传文件",
+    "EnumException:FriendlyExceptionCode:TimeOut10061": "操作超时,请稍后重试",
+    "EnumException:FriendlyExceptionCode:TimeOut10062": "等待超时,请稍后重试"
+  }
+}

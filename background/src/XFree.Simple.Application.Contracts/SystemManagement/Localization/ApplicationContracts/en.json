@@ -1,0 +1,30 @@
+{
+  "culture": "en",
+  "texts": {
+    "Permission:SystemManagement": "System management",
+    "Permission:Base": "Basic permissions",
+    "Permission:WithToken": "Requirement token",
+    "Permission:ChangePassword": "Change password",
+    "Permission:Users": "User management",
+    "Permission:ResetPassword": "Reset password",
+    "Permission:Create": "Create",
+    "Permission:Update": "Update",
+    "Permission:Delete": "Delete",
+    "Permission:Import": "Import",
+    "Permission:Export": "Export",
+    "Permission:Departs": "Depart management",
+    "Permission:QueryUser": "Query user",
+    "Permission:Posts": "Post management",
+    "Permission:Roles": "Role management",
+    "Permission:UiPermissions": "Menu Permission Management",
+    "Permission:RefreshBackgroundApi": "Refresh BackgroundApi",
+    "Permission:Dicts": "Dict management",
+    "Permission:Platform": "Platform",
+    "TenantServiceDataSeeder:User:Memo": "System administrator who has all system rights by default. Its initial password is 123456",
+    "TenantServiceDataSeeder:Dict:Description": "Department of type",
+    "TenantServiceDataSeeder:Post:Name": "Administrator",
+    "TenantServiceDataSeeder:Post:Memo": "System administrator",
+    "TenantServiceDataSeeder:Depart:OrgName1": "Company",
+    "TenantServiceDataSeeder:Depart:OrgName2": "The IT department"
+  }
+}

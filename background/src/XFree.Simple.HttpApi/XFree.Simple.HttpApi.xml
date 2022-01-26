@@ -1,0 +1,899 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>5.XFree.Simple.HttpApi</name>
+    </assembly>
+    <members>
+        <member name="T:XFree.Simple.HttpApi.Common.ExcelService">
+            <summary>
+            Excel帮助类
+            </summary>
+        </member>
+        <member name="F:XFree.Simple.HttpApi.Common.ExcelService._errorMessageService">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:XFree.Simple.HttpApi.Common.ExcelService.#ctor(XFree.Simple.Domain.Shared.Common.ErrorMessageService,Microsoft.Extensions.Localization.IStringLocalizerFactory)">
+            <summary>
+            
+            </summary>
+            <param name="errorMessageService"></param>
+            <param name="stringLocalizerFactory"></param>
+        </member>
+        <member name="M:XFree.Simple.HttpApi.Common.ExcelService.ImportExcel(System.String)">
+            <summary>
+            获取excel内容
+            </summary>
+            <param name="filePath">excel文件路径</param>
+            <returns></returns>
+        </member>
+        <member name="M:XFree.Simple.HttpApi.Common.ExcelService.ImportExcel``1(Microsoft.AspNetCore.Http.IFormFile,System.Collections.Generic.List{XFree.Simple.HttpApi.Common.ColumnItem{``0}})">
+            <summary>
+            
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="httpPostedFile"></param>
+            <param name="columnItems"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XFree.Simple.HttpApi.Common.ExcelService.Export``1(System.Collections.Generic.IReadOnlyList{``0},System.Collections.Generic.List{XFree.Simple.HttpApi.Common.ColumnItem{``0}},XFree.Simple.HttpApi.Common.ExcelDataType)">
+            <summary>
+            
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="list"></param>
+            <param name="columnItems"></param>
+            <param name="excelDataType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XFree.Simple.HttpApi.Common.ExcelService.ConvertDataTableToIList``1(System.Data.DataTable)">
+            <summary>
+            
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="dt"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XFree.Simple.HttpApi.Common.ExcelService.GetCellValue(NPOI.SS.UserModel.ICell)">
+            <summary>
+            对单元格进行判断取值
+            </summary>
+            <param name="cell"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XFree.Simple.HttpApi.Common.ExcelService.GetValue``1(``0,System.Reflection.PropertyInfo)">
+            <summary>
+            
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="objInfo"></param>
+            <param name="propertyInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="T:XFree.Simple.HttpApi.Common.ColumnItem`1">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.HttpApi.Common.ColumnItem`1.ColumnDisplayName">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.HttpApi.Common.ColumnItem`1.ExportGet">
+            <summary>
+            导出
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.HttpApi.Common.ColumnItem`1.ImportSet">
+            <summary>
+            导入赋值
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.HttpApi.Common.ColumnItem`1.IgnoreExport">
+            <summary>
+            导出时忽略
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.HttpApi.Common.ColumnItem`1.IgnoreImport">
+            <summary>
+            导入时忽略
+            </summary>
+        </member>
+        <member name="M:XFree.Simple.HttpApi.Common.ColumnItem`1.IsNeed(XFree.Simple.HttpApi.Common.ExcelDataType)">
+            <summary>
+            
+            </summary>
+            <param name="excelDataType"></param>
+            <returns></returns>
+        </member>
+        <member name="T:XFree.Simple.HttpApi.Common.ExcelDataType">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:XFree.Simple.HttpApi.Common.ExcelDataType.Export">
+            <summary>
+            导出
+            </summary>
+        </member>
+        <member name="F:XFree.Simple.HttpApi.Common.ExcelDataType.Import">
+            <summary>
+            导入
+            </summary>
+        </member>
+        <member name="F:XFree.Simple.HttpApi.Common.ExcelDataType.Template">
+            <summary>
+            模板
+            </summary>
+        </member>
+        <member name="T:XFree.Simple.HttpApi.Common.FixHttpContextWebClientInfoProvider">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.HttpApi.Common.FixHttpContextWebClientInfoProvider.Logger">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.HttpApi.Common.FixHttpContextWebClientInfoProvider.HttpContextAccessor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:XFree.Simple.HttpApi.Common.FixHttpContextWebClientInfoProvider.#ctor(Microsoft.Extensions.Logging.ILogger{Volo.Abp.AspNetCore.WebClientInfo.HttpContextWebClientInfoProvider},Microsoft.AspNetCore.Http.IHttpContextAccessor)">
+            <summary>
+            
+            </summary>
+            <param name="logger"></param>
+            <param name="httpContextAccessor"></param>
+        </member>
+        <member name="P:XFree.Simple.HttpApi.Common.FixHttpContextWebClientInfoProvider.BrowserInfo">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:XFree.Simple.HttpApi.Common.FixHttpContextWebClientInfoProvider.ClientIpAddress">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:XFree.Simple.HttpApi.Common.FixHttpContextWebClientInfoProvider.GetBrowserInfo">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:XFree.Simple.HttpApi.Common.FixHttpContextWebClientInfoProvider.GetClientIpAddress">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:XFree.Simple.HttpApi.SystemManage.Controllers.DatabaseConnectionController">
+            <summary>
+            数据库连接信息接口
+            </summary>
+        </member>
+        <member name="M:XFree.Simple.HttpApi.SystemManage.Controllers.DatabaseConnectionController.#ctor(XFree.Simple.Application.Contracts.SystemManagement.AppService.IDatabaseConnectionAppService)">
+            <summary>
+            
+            </summary>
+            <param name="databaseConnectionAppService"></param>
+        </member>
+        <member name="M:XFree.Simple.HttpApi.SystemManage.Controllers.DatabaseConnectionController.GetListPagedAsync(XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Common.DatabaseConnectionPagedAndSortedRequestDto)">
+            <summary>
+            分页查询
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XFree.Simple.HttpApi.SystemManage.Controllers.DatabaseConnectionController.GetListAsync">
+            <summary>
+            获取所有
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:XFree.Simple.HttpApi.SystemManage.Controllers.DatabaseConnectionController.GetAsync(System.String)">
+            <summary>
+            主键获取
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XFree.Simple.HttpApi.SystemManage.Controllers.DatabaseConnectionController.CreateAsync(XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Common.CreateDatabaseConnectionDto)">
+            <summary>
+            创建
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XFree.Simple.HttpApi.SystemManage.Controllers.DatabaseConnectionController.UpdateStatusAsync(System.String,XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Common.UpdateDatabaseConnectionStatusDto)">
+            <summary>
+            更新状态
+            </summary>
+            <param name="id"></param>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XFree.Simple.HttpApi.SystemManage.Controllers.DatabaseConnectionController.UpdateAsync(System.String,XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Common.UpdateDatabaseConnectionDto)">
+            <summary>
+            更新
+            </summary>
+            <param name="id"></param>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XFree.Simple.HttpApi.SystemManage.Controllers.DatabaseConnectionController.DeleteAsync(System.String)">
+            <summary>
+            删除
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="T:XFree.Simple.HttpApi.SystemManage.Controllers.DepartController">
+            <summary>
+            部门接口
+            </summary>
+        </member>
+        <member name="M:XFree.Simple.HttpApi.SystemManage.Controllers.DepartController.#ctor(XFree.Simple.Application.Contracts.SystemManagement.AppService.IDepartAppService)">
+            <summary>
+            
+            </summary>
+            <param name="departAppService"></param>
+        </member>
+        <member name="M:XFree.Simple.HttpApi.SystemManage.Controllers.DepartController.GetListPagedAsync(XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Organization.DepartPagedAndSortedRequestDto)">
+            <summary>
+            查询
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XFree.Simple.HttpApi.SystemManage.Controllers.DepartController.GetListAsync">
+            <summary>
+            获取所有
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:XFree.Simple.HttpApi.SystemManage.Controllers.DepartController.GetAsync(System.String)">
+            <summary>
+            主键获取
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XFree.Simple.HttpApi.SystemManage.Controllers.DepartController.CreateAsync(XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Organization.CreateDepartDto)">
+            <summary>
+            创建
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XFree.Simple.HttpApi.SystemManage.Controllers.DepartController.UpdateAsync(System.String,XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Organization.UpdateDepartDto)">
+            <summary>
+            更新
+            </summary>
+            <param name="id"></param>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XFree.Simple.HttpApi.SystemManage.Controllers.DepartController.DeleteAsync(System.String)">
+            <summary>
+            删除
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XFree.Simple.HttpApi.SystemManage.Controllers.DepartController.GetUserListPagedAsync(System.String,XFree.Simple.Domain.Shared.Common.PagedAndSortedRequestDto)">
+            <summary>
+            分页获取部门下的用户
+            </summary>
+            <param name="id"></param>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="T:XFree.Simple.HttpApi.SystemManage.Controllers.DictControllerController">
+            <summary>
+            字典接口
+            </summary>
+        </member>
+        <member name="M:XFree.Simple.HttpApi.SystemManage.Controllers.DictControllerController.#ctor(XFree.Simple.Application.Contracts.SystemManagement.AppService.IDictAppService)">
+            <summary>
+            
+            </summary>
+            <param name="dictAppService"></param>
+        </member>
+        <member name="M:XFree.Simple.HttpApi.SystemManage.Controllers.DictControllerController.GetListPagedAsync(XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Common.DictPagedAndSortedRequestDto)">
+            <summary>
+            分页查询
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XFree.Simple.HttpApi.SystemManage.Controllers.DictControllerController.GetListAsync">
+            <summary>
+            查询所有
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:XFree.Simple.HttpApi.SystemManage.Controllers.DictControllerController.GetAsync(System.String)">
+            <summary>
+            主键获取
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XFree.Simple.HttpApi.SystemManage.Controllers.DictControllerController.CreateAsync(XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Common.DictDto)">
+            <summary>
+            创建
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XFree.Simple.HttpApi.SystemManage.Controllers.DictControllerController.UpdateAsync(System.String,XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Common.DictDto)">
+            <summary>
+            更新
+            </summary>
+            <param name="id"></param>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XFree.Simple.HttpApi.SystemManage.Controllers.DictControllerController.DeleteAsync(System.String)">
+            <summary>
+            删除字典
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="T:XFree.Simple.HttpApi.SystemManage.Controllers.DictItemControllerController">
+            <summary>
+            字典项接口
+            </summary>
+        </member>
+        <member name="M:XFree.Simple.HttpApi.SystemManage.Controllers.DictItemControllerController.#ctor(XFree.Simple.Application.Contracts.SystemManagement.AppService.IDictItemAppService)">
+            <summary>
+            
+            </summary>
+            <param name="dictItemAppService"></param>
+        </member>
+        <member name="M:XFree.Simple.HttpApi.SystemManage.Controllers.DictItemControllerController.GetListPagedAsync(XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Common.DictItemPagedAndSortedResultRequestDto)">
+            <summary>
+            分页查询
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XFree.Simple.HttpApi.SystemManage.Controllers.DictItemControllerController.GetListAsync">
+            <summary>
+            获取所有
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:XFree.Simple.HttpApi.SystemManage.Controllers.DictItemControllerController.GetListAsync(System.String)">
+            <summary>
+            通过字典编码查询
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:XFree.Simple.HttpApi.SystemManage.Controllers.DictItemControllerController.GetAsync(System.String)">
+            <summary>
+            主键获取
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XFree.Simple.HttpApi.SystemManage.Controllers.DictItemControllerController.CreateAsync(XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Common.DictItemDto)">
+            <summary>
+            创建
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XFree.Simple.HttpApi.SystemManage.Controllers.DictItemControllerController.UpdateAsync(System.String,XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Common.DictItemDto)">
+            <summary>
+            更新
+            </summary>
+            <param name="id"></param>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XFree.Simple.HttpApi.SystemManage.Controllers.DictItemControllerController.UpdateStatusAsync(System.String,XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Common.UpdateDictItemStatusDto)">
+            <summary>
+            更新状态
+            </summary>
+            <param name="id"></param>
+            <param name="updateDictItemStatusDto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XFree.Simple.HttpApi.SystemManage.Controllers.DictItemControllerController.DeleteAsync(System.String)">
+            <summary>
+            删除
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="T:XFree.Simple.HttpApi.SystemManage.Controllers.LoginController">
+            <summary>
+            登录接口
+            </summary>
+        </member>
+        <member name="M:XFree.Simple.HttpApi.SystemManage.Controllers.LoginController.#ctor(XFree.Simple.Application.Contracts.SystemManagement.AppService.Authentication.IAuthenticationAppService)">
+            <summary>
+            
+            </summary>
+            <param name="authenticationAppService"></param>
+        </member>
+        <member name="M:XFree.Simple.HttpApi.SystemManage.Controllers.LoginController.Login(XFree.Simple.Application.Contracts.SystemManagement.AppService.Authentication.Dto.UserLoginDto)">
+            <summary>
+            登录
+            </summary>
+            <param name="userLoginDto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XFree.Simple.HttpApi.SystemManage.Controllers.LoginController.RefreshToken">
+            <summary>
+            刷新Token
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:XFree.Simple.HttpApi.SystemManage.Controllers.PostController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:XFree.Simple.HttpApi.SystemManage.Controllers.PostController.#ctor(XFree.Simple.Application.Contracts.SystemManagement.AppService.IPostAppService)">
+            <summary>
+            
+            </summary>
+            <param name="postAppService"></param>
+        </member>
+        <member name="M:XFree.Simple.HttpApi.SystemManage.Controllers.PostController.GetListPagedAsync(XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Organization.PostPagedAndSortedRequestDto)">
+            <summary>
+            分页查询
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XFree.Simple.HttpApi.SystemManage.Controllers.PostController.GetListAsync">
+            <summary>
+            获取所有
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:XFree.Simple.HttpApi.SystemManage.Controllers.PostController.GetAsync(System.String)">
+            <summary>
+            主键获取
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XFree.Simple.HttpApi.SystemManage.Controllers.PostController.CreateAsync(XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Organization.CreatePostDto)">
+            <summary>
+            创建
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XFree.Simple.HttpApi.SystemManage.Controllers.PostController.UpdateAsync(System.String,XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Organization.UpdatePostDto)">
+            <summary>
+            更新
+            </summary>
+            <param name="id"></param>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XFree.Simple.HttpApi.SystemManage.Controllers.PostController.UpdateStatusAsync(System.String,XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Organization.UpdatePostStatusDto)">
+            <summary>
+            更新状态
+            </summary>
+            <param name="id"></param>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XFree.Simple.HttpApi.SystemManage.Controllers.PostController.DeleteAsync(System.String)">
+            <summary>
+            删除
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="T:XFree.Simple.HttpApi.SystemManage.Controllers.RoleController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:XFree.Simple.HttpApi.SystemManage.Controllers.RoleController.#ctor(XFree.Simple.Application.Contracts.SystemManagement.AppService.IRoleAppService)">
+            <summary>
+            
+            </summary>
+            <param name="roleAppService"></param>
+        </member>
+        <member name="M:XFree.Simple.HttpApi.SystemManage.Controllers.RoleController.GetListPagedAsync(XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Permission.RolePagedAndSortedRequestDto)">
+            <summary>
+            分页查询
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XFree.Simple.HttpApi.SystemManage.Controllers.RoleController.GetListAsync">
+            <summary>
+            获取所有
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:XFree.Simple.HttpApi.SystemManage.Controllers.RoleController.GetAsync(System.String)">
+            <summary>
+            主键获取
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XFree.Simple.HttpApi.SystemManage.Controllers.RoleController.CreateAsync(XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Permission.CreateRoleDto)">
+            <summary>
+            创建
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XFree.Simple.HttpApi.SystemManage.Controllers.RoleController.UpdateAsync(System.String,XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Permission.UpdateRoleDto)">
+            <summary>
+            更新
+            </summary>
+            <param name="id"></param>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XFree.Simple.HttpApi.SystemManage.Controllers.RoleController.UpdateStatusAsync(System.String,XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Permission.UpdateRoleStatusDto)">
+            <summary>
+            更新状态
+            </summary>
+            <param name="id"></param>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XFree.Simple.HttpApi.SystemManage.Controllers.RoleController.DeleteAsync(System.String)">
+            <summary>
+            删除
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XFree.Simple.HttpApi.SystemManage.Controllers.RoleController.GrantUiPermission(System.String,System.String[])">
+            <summary>
+            授权
+            </summary>
+            <param name="id"></param>
+            <param name="permissionIds"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XFree.Simple.HttpApi.SystemManage.Controllers.RoleController.QueryUiPermissionIds(System.String)">
+            <summary>
+            查询角色Ui菜单权限
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XFree.Simple.HttpApi.SystemManage.Controllers.RoleController.QueryUsers(System.String)">
+            <summary>
+            查询角色下用户信息
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="T:XFree.Simple.HttpApi.SystemManage.Controllers.TenantController">
+            <summary>
+            租户接口
+            </summary>
+        </member>
+        <member name="M:XFree.Simple.HttpApi.SystemManage.Controllers.TenantController.#ctor(XFree.Simple.Application.Contracts.SystemManagement.AppService.ITenantAppService)">
+            <summary>
+            
+            </summary>
+            <param name="tenantAppService"></param>
+        </member>
+        <member name="M:XFree.Simple.HttpApi.SystemManage.Controllers.TenantController.GetListPagedAsync(XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Organization.TenantPagedAndSortedRequestDto)">
+            <summary>
+            分页查询
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XFree.Simple.HttpApi.SystemManage.Controllers.TenantController.GetListAsync">
+            <summary>
+            获取所有
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:XFree.Simple.HttpApi.SystemManage.Controllers.TenantController.GetAsync(System.String)">
+            <summary>
+            主键获取
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XFree.Simple.HttpApi.SystemManage.Controllers.TenantController.CreateAsync(XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Organization.CreateTenantDto)">
+            <summary>
+            创建
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XFree.Simple.HttpApi.SystemManage.Controllers.TenantController.UpdateAsync(System.String,XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Organization.UpdateTenantDto)">
+            <summary>
+            更新
+            </summary>
+            <param name="id"></param>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XFree.Simple.HttpApi.SystemManage.Controllers.TenantController.UpdateStatusAsync(System.String,XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Organization.UpdateTenantStatusDto)">
+            <summary>
+            更新状态
+            </summary>
+            <param name="id"></param>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XFree.Simple.HttpApi.SystemManage.Controllers.TenantController.DeleteAsync(System.String)">
+            <summary>
+            删除
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XFree.Simple.HttpApi.SystemManage.Controllers.TenantController.GetByNameAsync(System.String)">
+            <summary>
+             通过名称获取
+            </summary>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="T:XFree.Simple.HttpApi.SystemManage.Controllers.UiPermissionController">
+            <summary>
+            Ui菜单权限接口
+            </summary>
+        </member>
+        <member name="F:XFree.Simple.HttpApi.SystemManage.Controllers.UiPermissionController._uiPermissionAppService">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:XFree.Simple.HttpApi.SystemManage.Controllers.UiPermissionController.#ctor(XFree.Simple.Application.Contracts.SystemManagement.AppService.IUiPermissionAppService)">
+            <summary>
+            
+            </summary>
+            <param name="uiPermissionAppService"></param>
+        </member>
+        <member name="M:XFree.Simple.HttpApi.SystemManage.Controllers.UiPermissionController.GetAsync(System.String)">
+            <summary>
+            主键获取
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XFree.Simple.HttpApi.SystemManage.Controllers.UiPermissionController.CreateAsync(XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Permission.CreateUiPermissionDto)">
+            <summary>
+            创建
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XFree.Simple.HttpApi.SystemManage.Controllers.UiPermissionController.UpdateAsync(System.String,XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Permission.UpdateUiPermissionDto)">
+            <summary>
+            更新
+            </summary>
+            <param name="id"></param>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XFree.Simple.HttpApi.SystemManage.Controllers.UiPermissionController.DeleteAsync(System.String)">
+            <summary>
+            删除
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XFree.Simple.HttpApi.SystemManage.Controllers.UiPermissionController.QueryAsync(System.String)">
+            <summary>
+            通过父节点Id查询
+            </summary>
+            <param name="parentId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XFree.Simple.HttpApi.SystemManage.Controllers.UiPermissionController.GetListAsync">
+            <summary>
+            查询全部
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:XFree.Simple.HttpApi.SystemManage.Controllers.UiPermissionController.GetAllBackgroundApiAsync">
+            <summary>
+            获取全部接口资源
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:XFree.Simple.HttpApi.SystemManage.Controllers.UiPermissionController.RefreshBackgroundApiAsync">
+            <summary>
+            刷新接口资源
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:XFree.Simple.HttpApi.SystemManage.Controllers.UiPermissionController.BindBackgroundApi(System.String,System.String[])">
+            <summary>
+            分配接口资源
+            </summary>
+            <param name="id"></param>
+            <param name="permissionCodes"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XFree.Simple.HttpApi.SystemManage.Controllers.UiPermissionController.QueryPermissionCodes(System.String)">
+            <summary>
+            查询接口资源
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:XFree.Simple.HttpApi.SystemManage.Controllers.UiPermissionController.RemoveAllMemoryCache">
+            <summary>
+            清除本地缓存
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:XFree.Simple.HttpApi.SystemManage.Controllers.UsersController">
+            <summary>
+            用户接口
+            </summary>
+        </member>
+        <member name="M:XFree.Simple.HttpApi.SystemManage.Controllers.UsersController.#ctor(XFree.Simple.Application.Contracts.SystemManage.AppService.IUserAppService,XFree.Simple.HttpApi.Common.ExcelService,XFree.Simple.Domain.Shared.Common.ErrorMessageService)">
+            <summary>
+            
+            </summary>
+            <param name="userAppService"></param>
+            <param name="excelService"></param>
+            <param name="errorMessageService"></param>
+        </member>
+        <member name="M:XFree.Simple.HttpApi.SystemManage.Controllers.UsersController.GetListPagedAsync(XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Organization.UserPagedAndSortedRequestDto)">
+            <summary>
+            分页查询
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XFree.Simple.HttpApi.SystemManage.Controllers.UsersController.GetAsync(System.String)">
+            <summary>
+            主键获取
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XFree.Simple.HttpApi.SystemManage.Controllers.UsersController.GetByTokenAsync">
+            <summary>
+            通过Token获取用户信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:XFree.Simple.HttpApi.SystemManage.Controllers.UsersController.CreateAsync(XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Organization.CreateUserDto)">
+            <summary>
+            创建
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XFree.Simple.HttpApi.SystemManage.Controllers.UsersController.UpdateAsync(System.String,XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Organization.UpdateUserDto)">
+            <summary>
+            更新
+            </summary>
+            <param name="id"></param>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XFree.Simple.HttpApi.SystemManage.Controllers.UsersController.UpdateStatusAsync(System.String,XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Organization.UpdateUserStatusDto)">
+            <summary>
+            更新状态
+            </summary>
+            <param name="id"></param>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XFree.Simple.HttpApi.SystemManage.Controllers.UsersController.UpdatePasswordAsync(System.String,XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Organization.UpdateUserPasswordDto)">
+            <summary>
+            更新密码
+            </summary>
+            <param name="id"></param>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XFree.Simple.HttpApi.SystemManage.Controllers.UsersController.DeleteAsync(System.String)">
+            <summary>
+            删除用户
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XFree.Simple.HttpApi.SystemManage.Controllers.UsersController.ResetPassword(System.String)">
+            <summary>
+             重置密码
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="F:XFree.Simple.HttpApi.SystemManage.Controllers.UsersController.ColumnItems">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:XFree.Simple.HttpApi.SystemManage.Controllers.UsersController.Export(XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Organization.UserPagedAndSortedRequestDto)">
+            <summary>
+            导出
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XFree.Simple.HttpApi.SystemManage.Controllers.UsersController.DownLoadTemplate">
+            <summary>
+             下载模板
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:XFree.Simple.HttpApi.SystemManage.Controllers.UsersController.ImportAsync(Microsoft.AspNetCore.Http.IFormCollection)">
+            <summary>
+            
+            </summary>
+            <param name="formCollection"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XFree.Simple.HttpApi.SystemManage.Controllers.UsersController.GetUserPermisionInfo">
+            <summary>
+            获取用户信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:XFree.Simple.HttpApi.SystemManage.Controllers.UsersController.GetUiPermission">
+            <summary>
+            获取权限
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:XFree.Simple.HttpApi.SystemManage.Controllers.UsersController.GetOperationInfoListPagedAsync(XFree.Simple.Domain.Shared.Common.PagedAndSortedRequestDto)">
+            <summary>
+            分页查询用户操作记录
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XFree.Simple.HttpApi.SystemManage.Controllers.UsersController.GetExportListPagedAsync(XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Organization.UserPagedAndSortedRequestDto)">
+            <summary>
+            
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XFree.Simple.HttpApi.SystemManage.Controllers.UsersController.LS(System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="name"></param>
+            <param name="prefix"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XFree.Simple.HttpApi.SystemManage.Controllers.UsersController.ImportAsync(System.Collections.Generic.List{XFree.Simple.Application.Contracts.SystemManagement.AppService.Dto.Organization.UserDto})">
+            <summary>
+            
+            </summary>
+            <param name="inputs"></param>
+            <returns></returns>
+        </member>
+        <member name="T:XFree.Simple.HttpApi.SystemManage.SystemManagementHttpApiModule">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:XFree.Simple.HttpApi.SystemManage.SystemManagementHttpApiModule.PreConfigureServices(Volo.Abp.Modularity.ServiceConfigurationContext)">
+            <summary>
+            
+            </summary>
+            <param name="context"></param>
+        </member>
+    </members>
+</doc>

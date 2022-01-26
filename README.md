@@ -4,7 +4,7 @@ https://gitee.com/RiverBied/XFreeSimple.git
 
 https://github.com/zhoufeihong/XFreeSimple.git
 
-### 基础环境
+### 快速开始
 
 #### 1、启动mysql、redis基础设施
 

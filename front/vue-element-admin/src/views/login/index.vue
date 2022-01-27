@@ -16,7 +16,7 @@
       </div>
 
       <el-form-item>
-        <el-select v-model="loginForm.entryType" style="width:100%" @change="loginForm.tenantCode=''">
+        <el-select v-model="loginForm.entryType" style="width:100%" @change="entryTypeChange">
           <el-option
             v-for="item in $dict.EntryType"
             :key="item.id"
@@ -93,7 +93,21 @@
         {{ $t('login.logIn') }}
       </el-button>
 
-      <div style="position: relative" />
+      <div style="position:relative">
+        <div class="tips">
+          <span>用户名 : 666</span>
+          <span>密码 : 123456</span>
+        </div>
+        <div class="tips">
+          <span>1、用户名密码使用默认即可，可以切换平台账号管理后台。</span>
+        </div>
+        <div class="tips">
+          <span>2、支持多语言，不过英文翻译不太恰当，可自行调整。界面都只有查看权限，如果需要操作可以下载代码本地运行。</span>
+        </div>
+        <div class="tips">
+          <span>3、界面都只有查看权限，如果需要操作可以下载代码本地运行。</span>
+        </div>
+      </div>
     </el-form>
 
     <el-dialog :title="$t('login.thirdparty')" :visible.sync="showDialog">
@@ -137,10 +151,10 @@ export default {
     }
     return {
       loginForm: {
-        loginName: '',
-        password: '',
+        loginName: '666',
+        password: '123456',
         entryType: 'Tenant',
-        tenantCode: ''
+        tenantCode: '666'
       },
       loginRules: {
         loginName: [
@@ -235,6 +249,17 @@ export default {
         }
         return acc
       }, {})
+    },
+    entryTypeChange() {
+      if (this.entryType === 'Tenant') {
+        this.loginForm.loginName = '666'
+        this.loginForm.tenantCode = '666'
+        this.loginForm.password = '123456'
+        return
+      }
+      this.loginForm.loginName = '666'
+      this.loginForm.password = '123456'
+      this.loginForm.tenantCode = ''
     }
     // afterQRScan() {
     //   if (e.key === 'x-admin-oauth-code') {

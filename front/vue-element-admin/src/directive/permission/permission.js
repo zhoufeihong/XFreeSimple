@@ -8,7 +8,7 @@ import { checkPermission } from '@/utils/permission'
 export function bindPermission(el, binding) {
   const { value } = binding
   if (!checkPermission(value)) {
-    el.parentNode && el.parentNode.removeChild(el)
+    // el.parentNode && el.parentNode.removeChild(el)
   }
 }
 

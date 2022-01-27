@@ -20,7 +20,7 @@ using XFree.Simple.Domain.SystemManagement.Organization;
 
 namespace XFree.Simple.Application.SystemManage.AppService
 {
-    [Authorize(PlatformPermissions.Base.WithToken)]
+    [Authorize(PlatformPermissions.Tenants.Default)]
     public class TenantAppService : ApplicationService, ITenantAppService
     {
         private readonly TenantManager _tenantManager;
@@ -63,6 +63,7 @@ namespace XFree.Simple.Application.SystemManage.AppService
             return WebApiResult<TenantDto>.SuccessResult(ObjectMapper.Map<Tenant, TenantDto>(tenant));
         }
 
+        [Authorize(PlatformPermissions.Tenants.Create)]
         public async Task<WebApiResult<TenantDto>> CreateAsync(CreateTenantDto input)
         {
             if (string.IsNullOrEmpty(input.Code))
@@ -75,6 +76,7 @@ namespace XFree.Simple.Application.SystemManage.AppService
             return WebApiResult<TenantDto>.SuccessResult(ObjectMapper.Map<Tenant, TenantDto>(tenant));
         }
 
+        [Authorize(PlatformPermissions.Tenants.Update)]
         public async Task<WebApiResult<TenantDto>> UpdateAsync(string id, UpdateTenantDto input)
         {
             var updateEntity = await _tenantRepository.GetAsync(id);
@@ -84,6 +86,7 @@ namespace XFree.Simple.Application.SystemManage.AppService
             return WebApiResult<TenantDto>.SuccessResult(ObjectMapper.Map<Tenant, TenantDto>(updateEntity));
         }
 
+        [Authorize(PlatformPermissions.Tenants.Update)]
         public async Task<WebApiResult<TenantDto>> UpdateStatusAsync(string id, UpdateTenantStatusDto input)
         {
             var entity = await _tenantRepository.GetAsync(id);
@@ -91,6 +94,7 @@ namespace XFree.Simple.Application.SystemManage.AppService
             return WebApiResult<TenantDto>.SuccessResult(ObjectMapper.Map<Tenant, TenantDto>(entity));
         }
 
+        [Authorize(PlatformPermissions.Tenants.Delete)]
         public async Task<WebApiResult> DeleteAsync(string id)
         {
             await _tenantRepository.DeleteAsync(id);

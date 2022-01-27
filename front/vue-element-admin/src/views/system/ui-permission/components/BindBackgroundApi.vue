@@ -67,7 +67,7 @@ export default {
       bindBackgroundApi(this.rowId, this.selectdBackgroundApis).then(() => {
         this.$notify({
           title: this.$t('operation.result.successTitle'),
-          message: this.$t('operation.result.successMsg'),
+          message: this.$t('operation.successMsg'),
           type: 'success',
           duration: 2000
         })

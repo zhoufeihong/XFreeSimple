@@ -26,16 +26,12 @@ namespace XFree.SimpleService.Host.Permission
 
         private readonly ErrorMessageService _errorMessageService;
 
-        private readonly ICurrentTenant _currentTenant;
-
 
         public DefaultPermissionStore(ICheckUserPermission checkUserPermission,
-            ErrorMessageService errorMessageService,
-            ICurrentTenant currentTenant)
+            ErrorMessageService errorMessageService)
         {
             _checkUserPermission = checkUserPermission;
             _errorMessageService = errorMessageService;
-            _currentTenant = currentTenant;
         }
 
         /// <summary>
@@ -53,11 +49,6 @@ namespace XFree.SimpleService.Host.Permission
             }
             if (name == PlatformPermissions.Base.WithToken)
             {
-                // 租户用户没有权限访问
-                if (_currentTenant.GetMultiTenancySide() != MultiTenancySides.Host)
-                {
-                    _errorMessageService.ThrowMessage(SystemFriendlyExceptionCode.LoginError109);
-                }
                 return true;
             }
             if (providerName == PROVIDER_NAME_U)

@@ -218,11 +218,16 @@ namespace XFree.SimpleService.Host
                 op.SetDefaultCulture("zh-Hans");
             }); 
             // swagger
-            app.UseSwagger();
+            app.UseSwagger(options => {
+                options.PreSerializeFilters.Add((swagger, httpReq) =>
+                {
+                    swagger.Servers = new List<OpenApiServer> { new OpenApiServer { Url = $"{httpReq.Scheme}://{httpReq.Host.Value}/{httpReq.Headers["X-Forwarded-Prefix"]}" } };
+                });
+            });
             // swagger ui
             app.UseSwaggerUI(options =>
             {
-                options.SwaggerEndpoint("/swagger/v1/swagger.json", "XFreeSimple Service API");
+                options.SwaggerEndpoint("v1/swagger.json", "XFreeSimple Service API");
             });
             // 审计
             app.UseAuditing();

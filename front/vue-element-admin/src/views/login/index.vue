@@ -129,7 +129,7 @@ export default {
       }
     }
     const validateTenantCode = (rule, value, callback) => {
-      if (this.loginForm.entryType === 'Tenant' && value.length < 6) {
+      if (this.loginForm.entryType === 'Tenant' && value.length < 1) {
         callback(new Error(this.$t('login.请输入租户编码')))
       } else {
         callback()
@@ -209,15 +209,13 @@ export default {
             .dispatch('user/login', this.loginForm)
             .then(response => {
               const chooseLanguage = Cookies.get('language')
-              console.log(response)
-              console.log(chooseLanguage)
               if (!chooseLanguage) {
-                console.log(response)
                 this.$store.dispatch('app/setLanguage', response.data.tenantLanguage)
               }
               this.$router.push({
                 path: this.redirect || '/',
                 query: this.otherQuery
+              }).catch(() => {
               })
               this.loading = false
             })

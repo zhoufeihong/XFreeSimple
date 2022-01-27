@@ -2349,6 +2349,31 @@
             要求带上有效Token
             </summary>
         </member>
+        <member name="T:XFree.Simple.Application.Contracts.SystemManagement.Permission.PlatformPermissions.DatabaseConnections">
+            <summary>
+            数据库连接信息
+            </summary>
+        </member>
+        <member name="F:XFree.Simple.Application.Contracts.SystemManagement.Permission.PlatformPermissions.DatabaseConnections.Default">
+            <summary>
+            默认
+            </summary>
+        </member>
+        <member name="F:XFree.Simple.Application.Contracts.SystemManagement.Permission.PlatformPermissions.DatabaseConnections.Delete">
+            <summary>
+            删除
+            </summary>
+        </member>
+        <member name="F:XFree.Simple.Application.Contracts.SystemManagement.Permission.PlatformPermissions.DatabaseConnections.Update">
+            <summary>
+            更新
+            </summary>
+        </member>
+        <member name="F:XFree.Simple.Application.Contracts.SystemManagement.Permission.PlatformPermissions.DatabaseConnections.Create">
+            <summary>
+            创建
+            </summary>
+        </member>
         <member name="T:XFree.Simple.Application.Contracts.SystemManagement.Permission.PlatformPermissions.Tenants">
             <summary>
             租户
@@ -2388,6 +2413,18 @@
         <member name="M:XFree.Simple.Application.Contracts.SystemManagement.Permission.SystemManagementPermissionDefinitionProvider.Define(Volo.Abp.Authorization.Permissions.IPermissionDefinitionContext)">
             <summary>
             
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="M:XFree.Simple.Application.Contracts.SystemManagement.Permission.SystemManagementPermissionDefinitionProvider.DefinePlatform(Volo.Abp.Authorization.Permissions.IPermissionDefinitionContext)">
+            <summary>
+             定义平台接口权限
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="M:XFree.Simple.Application.Contracts.SystemManagement.Permission.SystemManagementPermissionDefinitionProvider.DefineSystemManagement(Volo.Abp.Authorization.Permissions.IPermissionDefinitionContext)">
+            <summary>
+            定义系统管理模块接口权限
             </summary>
             <param name="context"></param>
         </member>

@@ -23,7 +23,7 @@ using XFree.Simple.Domain.SystemManagement.Organization;
 
 namespace XFree.Simple.Application.SystemManage.AppService
 {
-    [Authorize(PlatformPermissions.Base.WithToken)]
+    [Authorize(PlatformPermissions.DatabaseConnections.Default)]
     public class DatabaseConnectionAppService : ApplicationService, IDatabaseConnectionAppService
     {
         private readonly IRepository<DatabaseConnection, string> _databaseConnectionRepository;
@@ -33,7 +33,7 @@ namespace XFree.Simple.Application.SystemManage.AppService
         private readonly DatabaseConnectionStringEncryption _databaseConnectionStringEncryption;
 
         public DatabaseConnectionAppService(IRepository<DatabaseConnection, string> databaseConnectionRepository,
-            ErrorMessageService errorMessageService, 
+            ErrorMessageService errorMessageService,
             DatabaseConnectionStringEncryption databaseConnectionStringEncryption)
         {
             _databaseConnectionRepository = databaseConnectionRepository;
@@ -44,12 +44,12 @@ namespace XFree.Simple.Application.SystemManage.AppService
         public async Task<WebApiResult<PagedEResultDto<DatabaseConnectionDto>>> GetListPagedAsync(DatabaseConnectionPagedAndSortedRequestDto input)
         {
             var resultQuery = _databaseConnectionRepository
-                .WhereIf(!string.IsNullOrEmpty(input.Name),w => w.Name == input.Name)
+                .WhereIf(!string.IsNullOrEmpty(input.Name), w => w.Name == input.Name)
                 .OrderBy(input.Sorting ?? "CreationTime");
 
             var resultData = await resultQuery.GetListPaged<DatabaseConnection, DatabaseConnectionDto>(ObjectMapper, input);
             foreach (var resultDto in resultData.Data.Data)
-            { 
+            {
                 resultDto.ConnectionString = _databaseConnectionStringEncryption.Decrypt(resultDto.ConnectionString);
             }
             return resultData;
@@ -72,6 +72,7 @@ namespace XFree.Simple.Application.SystemManage.AppService
             return WebApiResult<DatabaseConnectionDto>.SuccessResult(ObjectMapper.Map<DatabaseConnection, DatabaseConnectionDto>(databaseConnection));
         }
 
+        [Authorize(PlatformPermissions.DatabaseConnections.Create)]
         public async Task<WebApiResult<DatabaseConnectionDto>> CreateAsync(CreateDatabaseConnectionDto input)
         {
             var existsDatabaseConnection = await _databaseConnectionRepository.FirstOrDefaultAsync(f => f.Name == input.Name);
@@ -91,6 +92,7 @@ namespace XFree.Simple.Application.SystemManage.AppService
             return WebApiResult<DatabaseConnectionDto>.SuccessResult(ObjectMapper.Map<DatabaseConnection, DatabaseConnectionDto>(databaseConnection));
         }
 
+        [Authorize(PlatformPermissions.DatabaseConnections.Update)]
         public async Task<WebApiResult<DatabaseConnectionDto>> UpdateAsync(string id, UpdateDatabaseConnectionDto input)
         {
             var databaseConnection = await _databaseConnectionRepository.GetAsync(id);
@@ -102,17 +104,20 @@ namespace XFree.Simple.Application.SystemManage.AppService
             return WebApiResult<DatabaseConnectionDto>.SuccessResult(ObjectMapper.Map<DatabaseConnection, DatabaseConnectionDto>(databaseConnection));
         }
 
+        [Authorize(PlatformPermissions.DatabaseConnections.Delete)]
         public async Task<WebApiResult> DeleteAsync(string id)
         {
             await _databaseConnectionRepository.DeleteAsync(id);
             return WebApiResult.SuccessResult();
         }
 
+        [Authorize(PlatformPermissions.DatabaseConnections.Update)]
         public async Task<WebApiResult<DatabaseConnectionDto>> UpdateStatusAsync(string id, UpdateDatabaseConnectionStatusDto input)
         {
             var entity = await _databaseConnectionRepository.GetAsync(id);
             entity.Status = input.Status;
             return WebApiResult<DatabaseConnectionDto>.SuccessResult(ObjectMapper.Map<DatabaseConnection, DatabaseConnectionDto>(entity));
         }
+
     }
 }

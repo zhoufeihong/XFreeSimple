@@ -192,6 +192,7 @@ export default {
     cancelButtonText: '取消',
     confirmDeleteTitle: '提示',
     confirmDeleteMessage: '确认删除?',
+    successMsg: '操作成功',
     processing: '处理中'
   },
   timeFormat: {

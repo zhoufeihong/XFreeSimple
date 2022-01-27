@@ -3,6 +3,8 @@
   "texts": {
     "Permission:SystemManagement": "系统管理",
     "Permission:Base": "基础权限",
+    "Permission:Tenant": "租户",
+    "Permission:DatabaseConnection": "数据库连接信息",
     "Permission:WithToken": "要求Token",
     "Permission:ChangePassword": "修改密码",
     "Permission:Users": "用户管理",

@@ -96,7 +96,7 @@ namespace XFree.Simple.Application.SystemManage.AppService.Authentication
                 user.Login(_errorMessageService, userLoginDto.Password);
                 var resultDto = new UserLoginVo
                 {
-                    TenantLanguage = Const.LanguageCultureName.ToBackCulture(tenantLanguage) ?? Const.LanguageCultureName.ZH_CN_FRONT
+                    TenantLanguage = Const.LanguageCultureName.ToFrontCulture(tenantLanguage) ?? Const.LanguageCultureName.ZH_CN_FRONT
                 };
                 if (userLoginDto.ReturnUserToken)
                 {

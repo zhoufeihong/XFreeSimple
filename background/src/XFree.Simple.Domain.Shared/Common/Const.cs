@@ -34,6 +34,34 @@ namespace XFree.Simple.Domain.Shared.Common
             ///  中文
             /// </summary>
             public const string ZH_CN_FRONT = "zh";
+
+            /// <summary>
+            /// 
+            /// </summary>
+            /// <param name="culture"></param>
+            /// <returns></returns>
+            public static string ToFrontCulture(string culture)
+            {
+                if (culture == ZH_CN)
+                {
+                    return ZH_CN_FRONT;
+                }
+                return culture;
+            }
+
+            /// <summary>
+            /// 
+            /// </summary>
+            /// <param name="culture"></param>
+            /// <returns></returns>
+            public static string ToBackCulture(string culture)
+            {
+                if (culture == ZH_CN_FRONT)
+                {
+                    return ZH_CN;
+                }
+                return culture;
+            }
         }
 
         /// <summary>

@@ -25,7 +25,7 @@ export default {
     { id: 2, name: 'MongoDb', enName: 'MongoDb' }
   ],
   Language: [
-    { id: 'zh-cn', name: '简体中文', enName: 'Simplified Chinese' },
+    { id: 'zh', name: '简体中文', enName: 'Simplified Chinese' },
     { id: 'en', name: '英文', enName: 'English' }
   ],
   EntryType: [

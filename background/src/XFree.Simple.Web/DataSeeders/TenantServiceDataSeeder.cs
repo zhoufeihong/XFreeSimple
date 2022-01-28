@@ -120,7 +120,7 @@ namespace XFree.SimpleService.Host.DataSeeders
         private async Task AddTenantsAsync(DataSeedContext context)
         {
             var tenant = await _tenantRepository.GetAsync(context.TenantId.Value.ToString());
-            using (CultureHelper.Use(CultureInfo.GetCultureInfo(tenant.Language ?? Const.LanguageCultureName.ZH_CN)))
+            using (CultureHelper.Use(CultureInfo.GetCultureInfo(Const.LanguageCultureName.ToBackCulture(tenant.Language) ?? Const.LanguageCultureName.ZH_CN)))
             {
                 List<UiPermission> uiPermissions;
                 List<UiWithApi> uiWithApis;
